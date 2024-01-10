@@ -12,7 +12,6 @@ public class Main
         Student []s=new Student[10];
 
         int i=0;
-        //System.out.print("Enter the number of students : ")
         while(true) {
             System.out.print("\n1. Add\n2. Update\n3. Retrieve\n4. Exit\nEnter your choice : ");
             int choice=sc.nextInt();
