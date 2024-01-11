@@ -33,15 +33,4 @@ For any homework(exercise) or assessment or assignment Pull Request that you cre
 ## Instructions for maven-based backend homeworks, assessments and assignments
 - add the following code block below the `dependencies` section of your parent pom.xml
 ```
-<build>
-    <pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.10.0.2594</version>
-            </plugin>
-        </plugins>
-    </pluginManagement>
-</build>
-```
+\```
