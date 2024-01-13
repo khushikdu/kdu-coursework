@@ -1,30 +1,28 @@
-package ques2;
+package org.example.ques1_2;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 class MessageReceiver implements Runnable {
-    private static final Logger logger = LoggerFactory.getLogger(MessageReceiver.class);
     private MessageQueue messageQueue;
     private String receiverName;
-    private int messagesToReceive;
+    private static final Logger logger= LoggerFactory.getLogger(MessageReceiver.class);
 
     /**
      *
      * @param messageQueue
      * @param receiverName
-     * @param messagesToReceive
      */
-    public MessageReceiver(MessageQueue messageQueue, String receiverName, int messagesToReceive) {
+    public MessageReceiver(MessageQueue messageQueue, String receiverName) {
         this.messageQueue = messageQueue;
         this.receiverName = receiverName;
-        this.messagesToReceive = messagesToReceive;
     }
 
     public void run() {
-        for (int i = 0; i < messagesToReceive; i++) {
+        for(int i=0;i<3;i++) {
             try {
                 String message = messageQueue.getMessage();
-                logger.debug("\n{} received: {}", receiverName, message);
-                Thread.sleep(200);
+                logger.info("{} received {} ",receiverName,message);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

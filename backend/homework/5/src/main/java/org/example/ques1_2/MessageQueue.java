@@ -1,6 +1,5 @@
-package ques2;
-import java.util.LinkedList;
-import java.util.Queue;
+package org.example.ques1_2;
+import java.util.*;
 class MessageQueue {
     private Queue<String> messages = new LinkedList<>();
 

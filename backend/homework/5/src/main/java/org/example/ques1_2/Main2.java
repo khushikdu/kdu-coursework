@@ -1,14 +1,15 @@
-package ques2;
+package org.example.ques1_2;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Main {
+public class Main2 {
     /**
      *
      * @param args
      */
     public static void main(String[] args) {
         MessageQueue messageQueue = new MessageQueue();
+
         ExecutorService senderThreadPool = Executors.newFixedThreadPool(3);
         ExecutorService receiverThreadPool = Executors.newFixedThreadPool(3);
         for (int i = 1; i <= 3; i++) {
@@ -16,7 +17,7 @@ public class Main {
             senderThreadPool.submit(sender);
         }
         for (int i = 1; i <= 3; i++) {
-            MessageReceiver receiver = new MessageReceiver(messageQueue, "Receiver " + i,3);
+            MessageReceiver receiver = new MessageReceiver(messageQueue, "Receiver " + i);
             receiverThreadPool.submit(receiver);
         }
     }

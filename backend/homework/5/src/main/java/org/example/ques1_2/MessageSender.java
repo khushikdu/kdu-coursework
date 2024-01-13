@@ -1,4 +1,4 @@
-package ques2;
+package org.example.ques1_2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 class MessageSender implements Runnable {
@@ -17,16 +17,10 @@ class MessageSender implements Runnable {
     }
 
     public void run() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 3; i++) {
             String message = senderName + " message " + i;
             messageQueue.addMessage(message);
-            logger.info("{} sent: {}.", senderName, message);
-
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            logger.info("{}.",senderName + " sent: " + message);
         }
     }
 }

@@ -1,4 +1,4 @@
-package org.example.ques1;
+package org.example.ques1_2;
 
 public class Main {
     /**
@@ -7,8 +7,11 @@ public class Main {
      */
     public static void main(String[] args) {
         MessageQueue messageQueue = new MessageQueue();
+
         MessageSender messageSender=new MessageSender(messageQueue, "Sender " );
+
         Thread senderThread = new Thread(messageSender);
+
         MessageReceiver messageReceiver=new MessageReceiver(messageQueue, "Receiver " );
         Thread receiverThread = new Thread(messageReceiver);
 
