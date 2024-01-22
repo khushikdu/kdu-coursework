@@ -4,7 +4,6 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
-import springexercise.logging.Logging;
 import springexercise.model.Speaker;
 import springexercise.model.Tyre;
 import springexercise.model.Vehicle;
@@ -26,7 +25,6 @@ public class VehicleService {
                 vehicles.add(vehicle);
             }
         }
-
         return vehicles;
     }
     @Bean

@@ -11,7 +11,6 @@ public class Main {
         Logging.LoggerType loggerTypeInfo = Logging.LoggerType.INFO;
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         VehicleService vehicleService = context.getBean(VehicleService.class);
-
         Vehicle expensiveVehicle = vehicleService.findExpensiveVehicle();
         Logging.printLogger("Most expensive vehicle "+expensiveVehicle, loggerTypeInfo);
     }

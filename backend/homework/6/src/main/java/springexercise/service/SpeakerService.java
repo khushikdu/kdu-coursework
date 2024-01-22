@@ -15,6 +15,4 @@ public class SpeakerService {
     public Speaker getBoseSpeaker(){
         return new Speaker("Bose",5600.0);
     }
-
-
 }

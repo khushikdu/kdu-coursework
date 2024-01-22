@@ -7,7 +7,6 @@ import springexercise.model.Tyre;
 @Service
 
 public class TyreService {
-
     @Bean("mrf")
     @Primary
     public Tyre generateMRFTyre(){
