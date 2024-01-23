@@ -1,6 +1,7 @@
 package springexercise.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import springexercise.model.Speaker;
@@ -32,6 +33,7 @@ public class InventoryStore {
             }
         }
     }
+
     @Bean("factory1")
     InventoryStore inventoryStore1()
     {
@@ -42,16 +44,15 @@ public class InventoryStore {
     {
         return new InventoryStore();
     }
-    @Bean
-    public Vehicle findExpensiveVehicle(){
-        generateVehicle("factory1");
+
+    public Vehicle findExpensiveVehicle(@Qualifier("factory1")String factory){
+        generateVehicle(factory);
         return vehicles.stream()
                 .max((v1,v2)->Double.compare(v1.generatePrice(),v2.generatePrice()))
                 .orElse(null);
     }
-
-    public Vehicle findCheapestVehicle(){
-        generateVehicle("factory2");
+    public Vehicle findCheapestVehicle(@Qualifier("factory2")String factory){
+        generateVehicle(factory);
         return vehicles.stream()
                 .min((v1,v2)->Double.compare(v1.generatePrice(),v2.generatePrice()))
                 .orElse(null);
