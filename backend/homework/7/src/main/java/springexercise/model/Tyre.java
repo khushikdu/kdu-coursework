@@ -1,5 +1,4 @@
 package springexercise.model;
-
 public class Tyre {
     private String brand;
     private double price;

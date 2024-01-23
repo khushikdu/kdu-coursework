@@ -5,14 +5,16 @@ import springexercise.config.AppConfig;
 import springexercise.logging.Logging;
 import springexercise.model.Vehicle;
 import springexercise.service.InventoryStore;
-import springexercise.service.VehicleService;
 
 public class Main {
     public static void main(String[] args) {
         Logging.LoggerType loggerTypeInfo = Logging.LoggerType.INFO;
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        InventoryStore vehicleService = context.getBean(InventoryStore.class);
+        InventoryStore vehicleService = (InventoryStore) context.getBean("inventoryStore");
         Vehicle expensiveVehicle = vehicleService.findExpensiveVehicle();
-        Logging.printLogger("Most expensive vehicle "+expensiveVehicle, loggerTypeInfo);
+        Logging.printLogger("\nMost expensive vehicle "+expensiveVehicle, loggerTypeInfo);
+
+        Vehicle cheapestVehicle = vehicleService.findCheapestVehicle();
+        Logging.printLogger("\nCheapest vehicle "+cheapestVehicle, loggerTypeInfo);
     }
 }

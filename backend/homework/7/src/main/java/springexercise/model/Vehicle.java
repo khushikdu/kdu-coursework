@@ -3,15 +3,12 @@ public class Vehicle {
     private Tyre tyre;
     private Speaker speaker;
     private double price;
-
     public double getPrice() {
         return price;
     }
-
     public void setPrice(double price) {
         this.price = price;
     }
-
     public Vehicle(Tyre tyre, Speaker speaker) {
         this.tyre = tyre;
         this.speaker = speaker;

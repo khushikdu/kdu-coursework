@@ -18,15 +18,14 @@ public class InventoryStore {
     @Autowired
     private  List<Speaker> speakers;
 
-    //@PostConstruct
-    public void generateVehicle(String type){
+    public void generateVehicle(String factoryID){
         vehicles=new ArrayList<>();
         for (Tyre tyre:tyres) {
             for (Speaker speaker:speakers) {
                 Vehicle vehicle=new Vehicle(tyre,speaker);
-                if(type.equalsIgnoreCase("factory1")) {
+                if(factoryID.equalsIgnoreCase("factory1")) {
                     vehicle.setPrice(1.1 * vehicle.getPrice());
-                } else if (type.equalsIgnoreCase("factory2")) {
+                } else if (factoryID.equalsIgnoreCase("factory2")) {
                     vehicle.setPrice(1.2 * vehicle.getPrice());
                 }
                 vehicles.add(vehicle);
@@ -51,10 +50,10 @@ public class InventoryStore {
                 .orElse(null);
     }
 
-//    public Vehicle findCheapestVehicle(){
-//        generateVehicle("factory1");
-//        return vehicles.stream()
-//                .min((v1,v2)->Double.compare(v1.generatePrice(),v2.generatePrice()))
-//                .orElse(null);
-//    }
+    public Vehicle findCheapestVehicle(){
+        generateVehicle("factory2");
+        return vehicles.stream()
+                .min((v1,v2)->Double.compare(v1.generatePrice(),v2.generatePrice()))
+                .orElse(null);
+    }
 }
