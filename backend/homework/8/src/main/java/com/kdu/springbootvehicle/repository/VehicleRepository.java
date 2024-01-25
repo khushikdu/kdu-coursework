@@ -1,43 +1,38 @@
 package com.kdu.springbootvehicle.repository;
 
 import com.kdu.springbootvehicle.entities.Vehicle;
-import org.springframework.stereotype.Repository;
+import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
-@Repository
+@Data
 public class VehicleRepository {
-    List<Vehicle> vehicleList=new ArrayList<>();
-
-    public List<Vehicle> getVehicleList() {
-        return vehicleList;
-    }
+    private List<Vehicle> vehicleList=new ArrayList<>();
 
     public void addVehicle(Vehicle vehicle) {
-        vehicleList.add(vehicle);
+        this.vehicleList.add(vehicle);
     }
-    public Vehicle findVehicle(String name) {
-        for(Vehicle vehicle: vehicleList){
-            if(vehicle.getName().equalsIgnoreCase(name)){
-                return vehicle;
-            }
-        }
-        return null;
+    public Vehicle findVehicle(int id) {
+        return vehicleList.get(id);
     }
-    public void updateVehicle(String name, Vehicle newVehicle){
-        for(Vehicle vehicle: vehicleList){
-            if(vehicle.getName().equalsIgnoreCase(name)){
-                vehicle.setName(newVehicle.getName());
-                vehicle.setPrice(newVehicle.getPrice());
-            }
-        }
+    public void updateVehicle(int id, Vehicle newVehicle){
+        vehicleList.get(id).setName(newVehicle.getName());
+        vehicleList.get(id).setPrice(newVehicle.getPrice());
+
     }
-    public void deleteVehicle(String name) {
-        for (Vehicle vehicle : vehicleList) {
-            if (vehicle.getName().equalsIgnoreCase(name)) {
-                vehicleList.remove(vehicle);
-                break;
-            }
-        }
+    public void deleteVehicle(int id) {
+        vehicleList.remove(id);
+    }
+
+    public Vehicle leastExpensive() {
+        return vehicleList.stream()
+                .min((v1,v2)->Double.compare(v1.getPrice(),v2.getPrice()))
+                .orElse(null);
+    }
+
+    public Vehicle mostExpensive() {
+        return vehicleList.stream()
+                .max((v1,v2)->Double.compare(v1.getPrice(),v2.getPrice()))
+                .orElse(null);
     }
 }

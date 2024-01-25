@@ -4,12 +4,13 @@ import com.kdu.springbootvehicle.dto.VehicleDTO;
 import com.kdu.springbootvehicle.entities.Vehicle;
 import com.kdu.springbootvehicle.mapper.VehicleMapper;
 import com.kdu.springbootvehicle.repository.VehicleRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class VehicleServiceOperations implements VehicleService{
-    private VehicleRepository vehicleRepository;
+    private final VehicleRepository vehicleRepository=new VehicleRepository();
     public List<VehicleDTO> getVehicleList(){
         List<Vehicle> vehicleList=vehicleRepository.getVehicleList();
         List<VehicleDTO> vehicleDTOList=new ArrayList<>();
@@ -21,27 +22,31 @@ public class VehicleServiceOperations implements VehicleService{
         return vehicleDTOList;
     }
     @Override
-    public VehicleDTO addVehicle(VehicleDTO vehicleDTO) {
+    public void addVehicle(VehicleDTO vehicleDTO) {
         Vehicle vehicle= VehicleMapper.mapToVehicle(vehicleDTO);
         vehicleRepository.addVehicle(vehicle);
-        return vehicleDTO;
     }
 
     @Override
-    public VehicleDTO getByName(String name) {
-        Vehicle vehicle=vehicleRepository.findVehicle(name);
-        return VehicleMapper.mapToVehicleDto(vehicle);
+    public Vehicle getByID(int id){
+        return vehicleRepository.findVehicle(id);
     }
 
     @Override
-    public VehicleDTO updateVehicle(VehicleDTO vehicleDTO) {
+    public void updateVehicle(int id,VehicleDTO vehicleDTO) {
         Vehicle updateVehicle=VehicleMapper.mapToVehicle(vehicleDTO);
-        vehicleRepository.updateVehicle(vehicleDTO.getName(),updateVehicle);
-        return vehicleDTO;
+        vehicleRepository.updateVehicle(id,updateVehicle);
     }
 
     @Override
-    public void deleteVehicle(String name) {
-        vehicleRepository.deleteVehicle(name);
+    public void deleteVehicle(int id) {
+        vehicleRepository.deleteVehicle(id);
+    }
+
+    public Vehicle mostExpensive(){
+        return vehicleRepository.mostExpensive();
+    }
+    public Vehicle leastExpensive() {
+        return vehicleRepository.leastExpensive();
     }
 }

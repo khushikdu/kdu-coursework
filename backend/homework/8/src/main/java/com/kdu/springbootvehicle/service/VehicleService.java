@@ -1,13 +1,18 @@
 package com.kdu.springbootvehicle.service;
 
 import com.kdu.springbootvehicle.dto.VehicleDTO;
+import com.kdu.springbootvehicle.entities.Vehicle;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public interface VehicleService {
     public List<VehicleDTO> getVehicleList();
-    public VehicleDTO addVehicle(VehicleDTO vehicleDTO);
-    public VehicleDTO getByName(String name);
-    public VehicleDTO updateVehicle(VehicleDTO vehicleDTO);
-    public void deleteVehicle(String name);
+    public void addVehicle(VehicleDTO vehicleDTO);
+    public Vehicle getByID(int id);
+
+    public void updateVehicle(int id,VehicleDTO vehicleDTO);
+    public void deleteVehicle(int id);
+    public Vehicle mostExpensive();
+    public Vehicle leastExpensive();
 }
