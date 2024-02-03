@@ -13,6 +13,12 @@ public class Logging {
         ERROR,
     }
     private static final Logger logger = LoggerFactory.getLogger(Logging.class);
+
+    /**
+     * to print logger based on its type
+     * @param message: to be logged
+     * @param type:log level
+     */
     public static void printLogger(String message, LoggerType type) {
         switch (type) {
             case INFO -> logger.info(message);

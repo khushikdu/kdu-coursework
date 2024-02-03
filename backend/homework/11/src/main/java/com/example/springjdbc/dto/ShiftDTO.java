@@ -6,7 +6,9 @@ import lombok.Data;
 import java.sql.Time;
 import java.util.Date;
 import java.util.UUID;
-
+/**
+ * data transfer object class for shift
+ */
 @Data
 @AllArgsConstructor
 public class ShiftDTO {

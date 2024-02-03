@@ -8,7 +8,6 @@ import com.example.springjdbc.logging.Logging;
 import com.example.springjdbc.service.TenantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,6 +25,12 @@ public class TenantController {
     public TenantController(TenantService tenantService) {
         this.tenantService = tenantService;
     }
+
+    /**
+     * to call post mapping api for adding the tenant
+     * @param tenantDTO: dto object
+     * @return : response string
+     */
     @PostMapping("/addTenant")
     public ResponseEntity<String> addTenant(@RequestBody TenantDTO tenantDTO){
         try {
@@ -41,11 +46,23 @@ public class TenantController {
         }
         return null;
     }
+
+    /**
+     * to call post mapping api for adding all tenants
+     * @param allTenantsDTO: dto object
+     * @return : response string
+     */
     @PostMapping("/addAllTenant")
     public ResponseEntity<String> addAllTenant(@RequestBody AllTenantsDTO allTenantsDTO){
         tenantService.addAllServiceAtOnce(allTenantsDTO);
         return new ResponseEntity<>("Added successfully", HttpStatus.OK);
     }
+
+    /**
+     * to call get mapping api for all the tenants
+     * @return : list of tenant
+     * throws : CustomException
+     */
     @GetMapping("/allTenants")
     public ResponseEntity<List<Tenant>> getAllTenant() throws CustomException{
         try{

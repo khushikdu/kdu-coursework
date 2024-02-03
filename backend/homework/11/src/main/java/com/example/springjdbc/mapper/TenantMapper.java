@@ -8,6 +8,13 @@ import java.sql.SQLException;
 import java.util.UUID;
 
 public class TenantMapper implements RowMapper<Tenant> {
+    /**
+     * to map the row for tenant and display
+     * @param resultSet: object of class ResultSet
+     * @param row: row number
+     * @return : Tenant object containing all details
+     * throws SQLException
+     */
     @Override
     public Tenant mapRow(ResultSet resultSet, int row) throws SQLException {
         return new Tenant(

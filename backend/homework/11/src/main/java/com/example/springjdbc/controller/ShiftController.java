@@ -12,13 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ShiftController {
-
     Logging.LoggerType loggerTypeInfo = Logging.LoggerType.INFO;
     private final ShiftService shiftService;
     @Autowired
     public ShiftController(ShiftService shiftService) {
         this.shiftService = shiftService;
     }
+
+    /**
+     * to call post mapping api for adding the shift
+     * @param shiftDTO: shiftdto object
+     * @return : response String
+     */
     @PostMapping("/shift")
     public ResponseEntity<String> addShift(@RequestBody ShiftDTO shiftDTO) {
         Logging.printLogger("Adding Shift "+shiftDTO,loggerTypeInfo);

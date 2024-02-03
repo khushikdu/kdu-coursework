@@ -18,6 +18,12 @@ public class ShiftUserController {
     public ShiftUserController(ShiftUserService shiftUserService) {
         this.shiftUserService = shiftUserService;
     }
+
+    /**
+     * to call post mapping api for adding the shift user
+     * @param shiftUserDTO: dto object
+     * @return : response string
+     */
     @PostMapping("/shiftUser")
     public ResponseEntity<String> addShift(@RequestBody ShiftUserDTO shiftUserDTO) {
         Logging.printLogger("Adding Shift "+shiftUserDTO,loggerTypeInfo);

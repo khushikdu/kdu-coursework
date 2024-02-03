@@ -9,13 +9,21 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class ShiftDAO {
     Logging.LoggerType loggerTypeError = Logging.LoggerType.ERROR;
+
+    Logging.LoggerType loggerTypeInfo = Logging.LoggerType.INFO;
     private final JdbcTemplate jdbcTemplate;
     @Autowired
     public ShiftDAO(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
+
+    /**
+     * to insert value into the database
+     * @param shiftDTO: object containing the data to be inserted
+     */
     public void add(ShiftDTO shiftDTO) {
         try {
+            Logging.printLogger("Adding values to the database ",loggerTypeInfo);
             String sqlQuery = "insert into shifts(id, shift_type_id, name, start_date," +
                     "        end_date, start_time, end_time, created_at, updated_at," +
                     "        created_by, updated_by)" +

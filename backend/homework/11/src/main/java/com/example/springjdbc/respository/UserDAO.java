@@ -20,6 +20,10 @@ public class UserDAO {
     public UserDAO(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
+    /**
+     * to insert value into the database
+     * @param userDTO: object containing the data to be inserted
+     */
     public int add(UserDTO userDTO){
         try {
             Logging.printLogger("Adding user",loggerTypeInfo);
@@ -42,6 +46,10 @@ public class UserDAO {
             throw e;
         }
     }
+    /**
+     * to get the list of all the users
+     * @return : list of users
+     */
     public List<Users> getUsers(){
         String sqlQuery="select * from users";
         return jdbcTemplate.query(sqlQuery,new UserMapper());

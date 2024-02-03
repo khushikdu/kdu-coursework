@@ -5,6 +5,9 @@ import lombok.Data;
 
 import java.util.Date;
 import java.util.UUID;
+/**
+ * data transfer object class for users
+ */
 @Data
 @AllArgsConstructor
 public class UserDTO {

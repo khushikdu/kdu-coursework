@@ -9,6 +9,13 @@ import java.util.UUID;
 
 
 public class UserMapper implements RowMapper<Users> {
+    /**
+     * to map the row for User table and display
+     * @param resultSet: object of class ResultSet
+     * @param row: row number
+     * @return : users object containing all details
+     * throws SQLException
+     */
     @Override
     public Users mapRow(ResultSet resultSet, int row) throws SQLException{
         return new Users(

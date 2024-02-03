@@ -5,7 +5,9 @@ import lombok.Data;
 
 import java.util.Date;
 import java.util.UUID;
-
+/**
+ * data transfer object class for tenant
+ */
 @Data
 @AllArgsConstructor
 public class TenantDTO {

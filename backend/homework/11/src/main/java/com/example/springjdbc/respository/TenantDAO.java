@@ -29,21 +29,29 @@ public class TenantDAO {
         this.shiftUserDAO = shiftUserDAO;
         this.shiftDAO = shiftDAO;
     }
+    /**
+     * to insert value into the database
+     * @param tenantDTO: object containing the data to be inserted
+     */
     @Transactional
-    public int add(TenantDTO tenantDAO){
+    public int add(TenantDTO tenantDTO){
         try{
             String sqlQuery="insert into tenants (id, name, created_by, updated_by) " +
                     "values (?, ?, ?, ?)";
             return jdbcTemplate.update(sqlQuery,
-                    tenantDAO.getId(),
-                    tenantDAO.getName(),
-                    tenantDAO.getCreatedBy(),
-                    tenantDAO.getUpdatedBy());
+                    tenantDTO.getId(),
+                    tenantDTO.getName(),
+                    tenantDTO.getCreatedBy(),
+                    tenantDTO.getUpdatedBy());
         } catch(Exception e){
             Logging.printLogger("Errror adding tenant :"+e.getMessage(),loggerTypeError);
             throw e;
         }
     }
+    /**
+     * to insert value into the database
+     * @param allTenantsDTO: object containing the data to be inserted
+     */
     @Transactional
     public void addAllTenants(AllTenantsDTO allTenantsDTO){
         try{
@@ -56,6 +64,11 @@ public class TenantDAO {
             Logging.printLogger("Error wile adding : "+e.getMessage(),loggerTypeError);
         }
     }
+
+    /**
+     * to get the list of all the tenants
+     * @return : list of tenants
+     */
     public List<Tenant> getAllTenant() {
         String sqlQuery="select * from tenants";
         return jdbcTemplate.query(sqlQuery,new TenantMapper());

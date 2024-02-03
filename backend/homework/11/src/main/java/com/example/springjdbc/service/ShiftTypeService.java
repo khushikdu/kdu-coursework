@@ -13,6 +13,10 @@ public class ShiftTypeService {
     public ShiftTypeService(ShiftTypeDAO shiftTypeDAO) {
         this.shiftTypeDAO = shiftTypeDAO;
     }
+    /**
+     * to add the dto object in the repository class
+     * @param shiftTypeDTO : data transfer object
+     */
     @Transactional
     public void addService(ShiftTypeDTO shiftTypeDTO) {
         shiftTypeDAO.add(shiftTypeDTO);

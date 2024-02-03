@@ -14,6 +14,10 @@ public class ShiftUserDAO {
     public ShiftUserDAO(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
+    /**
+     * to insert value into the database
+     * @param shiftUserDTO: object containing the data to be inserted
+     */
     public void add(ShiftUserDTO shiftUserDTO){
         try {
             String sqlQuery = "insert into shift_users (id, shift_id, user_id, tenant_id" +

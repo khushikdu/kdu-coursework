@@ -16,10 +16,19 @@ public class UserService {
     public UserService(UserDAO userDAO) {
         this.userDAO = userDAO;
     }
+    /**
+     * to add the dto object in the repository class
+     * @param userDTO : data transfer object
+     */
     @Transactional
     public void addService(UserDTO userDTO){
         userDAO.add(userDTO);
     }
+
+    /**
+     * to get the list of all the users
+     * @return : list of all the users
+     */
     public List<Users> getUsers(){
         return userDAO.getUsers();
     }

@@ -18,6 +18,12 @@ public class ShiftTypeController {
     public ShiftTypeController(ShiftTypeService shiftTypeService) {
         this.shiftTypeService = shiftTypeService;
     }
+
+    /**
+     * to call post mapping api for adding the shift type
+     * @param shiftTypeDTO: dto object
+     * @return : response entity string
+     */
     @PostMapping("/shiftType")
     public ResponseEntity<String> addShift(@RequestBody ShiftTypeDTO shiftTypeDTO) {
         Logging.printLogger("Adding Shift "+shiftTypeDTO,loggerTypeInfo);

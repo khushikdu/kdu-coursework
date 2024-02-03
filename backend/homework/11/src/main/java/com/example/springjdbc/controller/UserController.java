@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,11 +23,22 @@ public class UserController {
     public UserController(UserService userService) {
         this.userService = userService;
     }
-    @GetMapping("/addUser")
+
+    /**
+     * to call post mapping api for adding the user
+     * @param userDTO: dto object fdr user
+     * @return : response string
+     */
+    @PostMapping("/addUser")
     public ResponseEntity<String> addUser(@RequestBody UserDTO userDTO) {
         userService.addService(userDTO);
         return new ResponseEntity<>("Added Succesfully", HttpStatus.OK);
     }
+
+    /**
+     * to call get mapping api for getting all the user
+     * @return : list of users
+     */
     @GetMapping("/getAllUsers")
     public ResponseEntity<List<Users>> getAllUsers(){
         try {
