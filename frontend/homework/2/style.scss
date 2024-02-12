@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 2px;
+    box-sizing: border-box;
+    margin: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-size: 80px;
+
+    color: rgb(89, 89, 89);
+}
+p{
+    line-height: 150%;
+}
+#main{
+    box-shadow: 5px 5px 10px 0px rgba(106, 106, 106, 0.77);      
+    margin:60px;
+    padding:20px;
+
+    .info{
+        font-size: 20px;
+        color: gray;
+    }
+    .present-info{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2px;
+        margin-bottom: 30px;
+    
+        .temp{
+            display: flex;
+            width: 50%;
+        }
+        .temp-details p{
+            font-size: 25px;
+            font-weight: bold;
+            color: grey;
+        }
+        .temp-details p span{
+            color: rgb(92, 91, 91);
+        }
+        .temp-img{
+            width: 150px;
+            height: 150px;
+        }
+        #temperature{
+            font-size: 70px;
+
+            color: rgb(89, 89, 89);
+            
+        }
+        .temp-details{
+            font-size: 30px;
+        }
+        #faren{
+            font-size: 39px;
+            color: grey;
+        }
+    }
+    .weekly-info{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 10px;
+    
+        .days{
+
+            p{
+                color: rgb(89, 89, 89);
+                text-align: center;
+                #day-weight{
+                    font-weight: bold;
+                }
+                line-height: 100%;
+            }
+            #week-day{
+                font-weight: 200;
+            }
+            .range{
+                display: flex;
+                justify-content: space-between;
+
+                font-size: 30px;
+            }
+            #min{
+                color:rgb(90, 88, 88);
+            }
+            #max{
+                color: rgb(59, 58, 58);
+            }
+            img{
+                width: 120px;
+            }
+            #pollen{
+                font-size: 20px;
+                color: gray;
+            }
+        }
+    }
+}
