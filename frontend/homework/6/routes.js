@@ -1,5 +1,6 @@
 const express=require('express');
 const uuid = require('uuid')
+const cors=require('cors')
 let accounts=require('./data')
 
 console.log(accounts)
@@ -7,6 +8,7 @@ const app=express();
 const port=5001;
 
 app.use(express.json());
+app.use('cors');
 
 app.listen(port,()=>{
     console.log(`Application started on port ${port}`)
