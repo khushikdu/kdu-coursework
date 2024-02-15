@@ -124,14 +124,14 @@
 .main-section .post-area .tweet-box .upload-btns .upload-options .upload-option-icons {
   width: 1rem;
   height: 1rem;
-  fill: rgb(29, 155, 240);
+  fill: #1D9BF0;
   margin-left: 0.4rem;
   margin-top: 0.6rem;
 }
 .main-section .post-area .tweet-box .upload-btns .post-btn .post {
   width: 4.5rem;
   height: 2.1rem;
-  background-color: rgb(29, 155, 240);
+  background-color: #1D9BF0;
   border-radius: 3.5rem;
   border: none;
   font-weight: bolder;
@@ -173,7 +173,7 @@
   font-size: small;
 }
 .main-section .post-area .posts .default-post .post-text .tweet-text .p-text-tweet .blue-text {
-  color: rgb(29, 155, 240);
+  color: #1D9BF0;
 }
 .main-section .post-area .posts .default-post .post-text .tweet-text #tweet-image {
   width: 50%;
@@ -202,7 +202,7 @@
   margin-top: 1em;
   width: 1em;
   height: 1em;
-  fill: #F91880;
+  fill: #f91880;
   display: none;
 }
 .main-section .post-area .posts .default-post .post-text .like-comment .upvote {
@@ -271,14 +271,14 @@
   .main-mobile .tweet-box .upload-btns .upload-options .upload-option-icons {
     width: 1rem;
     height: 1rem;
-    fill: rgb(29, 155, 240);
+    fill: #1D9BF0;
     margin-left: 0.4rem;
     margin-top: 0.6rem;
   }
   .main-mobile .tweet-box .upload-btns .post-btn .post {
     width: 4.5rem;
     height: 2.1rem;
-    background-color: rgb(29, 155, 240);
+    background-color: #1D9BF0;
     border-radius: 3.5rem;
     border: none;
     font-weight: bolder;
@@ -355,7 +355,7 @@
     font-size: small;
   }
   .main-mobile .posts-mobile .posts .default-post .post-text .tweet-text .p-text-tweet .blue-text {
-    color: rgb(29, 155, 240);
+    color: #1D9BF0;
   }
   .main-mobile .posts-mobile .posts .default-post .post-text .like-comment {
     display: flex;
@@ -390,7 +390,7 @@
   }
   .main-mobile .posts-mobile .write-tweet .write-tweet-icon {
     padding: 1rem;
-    background-color: rgb(29, 155, 240);
+    background-color: #1D9BF0;
     fill: white;
     width: 3rem;
     border-radius: 50%;

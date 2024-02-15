@@ -7,16 +7,12 @@
   color: white;
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
-  // overflow: hidden;
-  // height: 100vh;
 }
 
 .main-section {
   display: flex;
-  // align-items: center;**
 
   .navigation-section {
-    // background-color: red;
     align-items: center;
     margin-top: 1vh;
     margin-left: 10vh;
@@ -29,12 +25,10 @@
       margin-left: 1vh;
       font-size: 1.5rem;
     }
-    // padding-left: 3vh;
     .sidebarOption {
       display: flex;
       margin-left: 1vh;
       margin-top: 2vh;
-      // padding: 1vh;
       font-size: 0.55rem;
       font-weight: 800;
       .svg-icon {
@@ -50,7 +44,6 @@
     }
 
     .post-btn {
-      // margin-left: 12px;
       justify-content: center;
       width: 70%;
       border: none;
@@ -98,30 +91,20 @@
     }
   }
   .post-area {
-    // display: flex;
-    // background-color: aqua;
     flex-direction: column;
     width: 46%;
     border-right: 0.1px solid grey;
 
     .tweet-box {
-      // flex: 0.5;
-      // border-top: .1px solid gray;
       border-bottom: 0.1px solid gray;
-      // margin: 7px;
       padding: 2vh;
       min-width: fit-content;
-      // overflow-y: scroll;
-      // background-color: aqua;
       height: fit-content;
 
       .form-area {
-        // padding: 20px;
-        // background-color: red;
 
         .tweetbox-input {
           display: flex;
-          // border: 1px solid white;
 
           .profile-avatar {
             width: 5vh;
@@ -135,14 +118,12 @@
             border: none;
             outline: none;
             &::placeholder {
-              // font-weight: bolder;
               font-size: medium;
             }
           }
         }
       }
       .upload-btns {
-        // background-color: red;
         margin-top: 2vh;
         display: flex;
         .upload-options {
@@ -151,19 +132,18 @@
           .upload-option-icons {
             width: 1rem;
             height: 1rem;
-            fill: rgb(29, 155, 240);
+            fill: #1D9BF0;
             margin-left: 0.4rem;
             margin-top: 0.6rem;
           }
         }
 
         .post-btn {
-          // background-color: red;
 
           .post {
             width: 4.5rem;
             height: 2.1rem;
-            background-color: rgb(29, 155, 240);
+            background-color: #1D9BF0;
             border-radius: 3.5rem;
             border: none;
             font-weight: bolder;
@@ -180,8 +160,6 @@
         display: flex;
         border-bottom: 0.1px solid grey;
         padding-bottom: 0.5rem;
-        // margin: 7px;
-        // background-color: yellow;
         .post-picture {
           margin: 1.5vh;
           .profile-avatar {
@@ -204,14 +182,13 @@
           }
 
           .tweet-text {
-            // margin-top: 1rem;
             align-items: center;
             .p-text-tweet {
               font-weight: 400rem;
               font-size: small;
 
               .blue-text {
-                color: rgb(29, 155, 240);
+                color: #1D9BF0;
               }
             }
             #tweet-image {
@@ -277,26 +254,17 @@
   .main-mobile {
     display: block;
     color: white;
-    // tweet box
 
     .tweet-box {
-      // flex: 0.5;
-      // border-top: .1px solid gray;
       border-bottom: 0.1px solid gray;
-      // margin: 7px;
       padding: 2vh;
       min-width: fit-content;
-      // overflow-y: scroll;
-      // background-color: aqua;
       height: fit-content;
 
       .form-area {
-        // padding: 20px;
-        // background-color: red;
 
         .tweetbox-input {
           display: flex;
-          // border: 1px solid white;
 
           .profile-avatar {
             width: 5vh;
@@ -310,14 +278,12 @@
             border: none;
             outline: none;
             &::placeholder {
-              // font-weight: bolder;
               font-size: medium;
             }
           }
         }
       }
       .upload-btns {
-        // background-color: red;
         margin-top: 2vh;
         display: flex;
         .upload-options {
@@ -326,19 +292,18 @@
           .upload-option-icons {
             width: 1rem;
             height: 1rem;
-            fill: rgb(29, 155, 240);
+            fill: #1D9BF0;
             margin-left: 0.4rem;
             margin-top: 0.6rem;
           }
         }
 
         .post-btn {
-          // background-color: red;
 
           .post {
             width: 4.5rem;
             height: 2.1rem;
-            background-color: rgb(29, 155, 240);
+            background-color: #1D9BF0;
             border-radius: 3.5rem;
             border: none;
             font-weight: bolder;
@@ -348,15 +313,11 @@
       }
     }
 
-    //tweet box
-
     .top-icons {
       margin: 0.5rem;
       display: flex;
       justify-content: space-between;
-      // border-bottom: 0.1px solid gray;
       .back-option {
-        // width:70%
         .back-btn {
           width: 1rem;
           fill: white;
@@ -431,13 +392,12 @@
             }
 
             .tweet-text {
-              // margin-top: 1rem;
               .p-text-tweet {
                 font-weight: 400rem;
                 font-size: small;
 
                 .blue-text {
-                  color: rgb(29, 155, 240);
+                  color: #1D9BF0;
                 }
               }
             }
@@ -455,14 +415,6 @@
                   height: 1em;
                   fill: grey;
                 }
-                // .like-icons{
-
-                //     margin-top: 1em;
-                //     width: 1em;
-                //     height: 1em;
-                //     fill: grey;
-
-                // }
               }
 
               .upvote {
@@ -485,11 +437,10 @@
         position: fixed;
         width: 4rem;
         height: 4rem;
-        // background-color: rgb(29, 155, 240);
         border-radius: 50%;
         .write-tweet-icon {
           padding: 1rem;
-          background-color: rgb(29, 155, 240);
+          background-color: #1D9BF0;
           fill: white;
           width: 3rem;
           border-radius: 50%;
@@ -499,17 +450,6 @@
   }
 }
 
-//mask nav starts
-// .mask{
-//     left: 0;
-//     top: 0;
-//     position:fixed;
-//     height: 100%;
-//     z-index: 0;
-//     background-color:#f4ecec4e;
-//     display:none;
-
-// }
 
 .mob_nav {
   z-index: 1;
@@ -568,7 +508,6 @@
     display: flex;
     margin-top: 1em;
     font-size: 15px;
-    // padding-top: 1em;
     font-weight: 900rem;
   }
 
@@ -585,4 +524,3 @@
     line-height: 2rem;
   }
 }
-//mask nav ends

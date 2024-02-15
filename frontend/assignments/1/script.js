@@ -32,7 +32,7 @@ function addPost() {
     let postPicture = document.createElement("div");
     postPicture.className = "post-picture";
     let profileImg = document.createElement("img");
-    profileImg.src = "/pictures/profile.png";
+    profileImg.src = "pictures/profile.png";
     profileImg.alt = "profile-img";
     profileImg.className = "profile-avatar";
     postPicture.appendChild(profileImg);
