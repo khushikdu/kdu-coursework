@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real time Stock</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <header id="header">KDU Stock Market Dashborad</header>
+
+        <div id="section-area">
+
+            <div id="left-section">
+
+                <div class="sub-headers">
+                    <div id="company">
+
+                        <div id="logo">
+                            <img src="1.jpg" alt="">
+                        </div>
+
+                        <div id="title">Zomato</div>
+
+                    </div>
+                    <div id="price">
+                        Price &nbsp;
+                        <div id="text-arrow">
+                        <span id="price-stock">142.32 &nbsp;</span>
+                        <span id="arrow">&uarr;</span> &nbsp;&nbsp;&nbsp; 
+                        </div>
+                        <span id="sub">3%</span>
+                    </div>
+                    <div id="quantity">
+                        <input id="input-type" type="text" placeholder="Enter QTY">
+                    </div>
+                    <div id="buy">Buy</div>
+                    <div id="sell">Sell</div>
+                </div>
+                <div id="graph">
+                    <div id="grids">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="right-section">
+                <div id="history-section">History</div>
+                <div id="transactions">
+                    <div id="individual-transaction">
+
+                        <div id="text">
+                            <p id="number-of-stocks">100 Stocks</p>
+                            <p id="trans-details">Fri, 02 Feb 1996 21:04:05 GMT</p>
+                        </div>
+
+                        <div id="operation">Buy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
