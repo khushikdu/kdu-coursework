@@ -9,12 +9,14 @@ interface IRecipe {
     calorieCount: number
 }
 
+// Define the interface for the RecipeSearchApp class
 interface IRecipeSearchApp {
     fetchRecipesFromAPI(): Promise<JSON>;
     searchRecipes(query: string): Promise<JSON>;
     printAllRecipes(recipesArr: IRecipe[]): void;
 }
 
+// Search for recipes based on a query
 class RecipeSearchApp implements IRecipeSearchApp{
     async fetchRecipesFromAPI(): Promise<JSON>  {
         try{
@@ -27,6 +29,7 @@ class RecipeSearchApp implements IRecipeSearchApp{
         }
     }
 
+    // Transform API response into IRecipe format
     async searchRecipes(query: string): Promise<JSON> {
         try {
             const response = await fetch(`https://dummyjson.com/recipes/search?q=${query}`);
@@ -46,6 +49,7 @@ class RecipeSearchApp implements IRecipeSearchApp{
                 };
                 recipes.push(responseObject);
             });
+            this.printAllRecipes(recipes);
             return body;
 
         }
@@ -55,6 +59,7 @@ class RecipeSearchApp implements IRecipeSearchApp{
         }
     }
 
+    // Print all recipes
     printAllRecipes(recipesArr: IRecipe[]): void { 
         recipesArr.forEach(recipe => console.log(recipe));
     }
