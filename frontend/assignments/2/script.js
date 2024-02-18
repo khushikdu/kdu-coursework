@@ -113,7 +113,6 @@ function login() {
   console.log("here")
   document.getElementsByClassName("login-page")[0].style.display = "none";
   document.getElementsByClassName("main-section")[0].style.display = "block";
-  // window.location.href="mobile-tweet.html"
 }
 
 function message() {
@@ -127,7 +126,6 @@ function clickOnUser() {
   for (var i = 0; i < users.length; i++) {
     users[i].style.backgroundColor = "#484747";
 
-    // Assuming you want to apply styles to child elements of each user
     var userChat = users[i].getElementsByClassName("user-chat")[0];
     var h4Elements = users[i].getElementsByTagName("h4");
     var spanElements = users[i].getElementsByTagName("span");
@@ -140,7 +138,7 @@ function clickOnUser() {
 
     for (var k = 0; k < spanElements.length; k++) {
       spanElements[k].style.backgroundColor = "#484747";
-      spanElements[k].style.color = "grey"; // Example of applying styles to span
+      spanElements[k].style.color = "grey"; 
     }
   }
 }

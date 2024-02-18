@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="./login.js"></script>
 </head>
 <body>
     <!-- Login page starts -->
@@ -16,14 +17,20 @@
                 Login to 
                 <i class="fab fa-x-twitter"></i>
             </div>
-            <div class="input-box">
-                <input type="text" placeholder="Username">
+            
+            
+            <div class="input-box" >
+                <input type="text" placeholder="Username" id="login_username">
             </div>
-            <div class="input-box">
-                <input type="password" placeholder="Password">
+            
+            
+            <div class="input-box" >
+                <input type="password" placeholder="Password" id="login_password">
             </div>
+            
+            
             <a href="index.html">
-                <div class="login-btn">Log In</div>
+                <div class="login-btn" onclick="loginUser(event)">Log In</div>
             </a>
             
         </form>

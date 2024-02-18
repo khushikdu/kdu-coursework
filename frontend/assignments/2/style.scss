@@ -19,14 +19,11 @@
 }
 
 .login-page {
-  // display: none;
-  // background-color: #f91880; type="submit"
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   text-align: center;
-  // width: 50%;
 
   #text {
     margin-bottom: 25px;
@@ -75,8 +72,6 @@
 }
 
 .main-section {
-  // display: none;
-  // background-color: #1D9BF0;
   height: 100vh;
 
   .navigation-section {
@@ -84,10 +79,8 @@
     margin-top: 1vh;
     margin-left: 10%;
     padding-left: 2vh;
-    // border-right: 0.1px solid gray;
     width: 20%;
     position: fixed;
-    // position: o;
     z-index: 1;
     top: 0;
 
@@ -177,16 +170,11 @@
   }
 
   .post-area {
-    // display: none;
-    // background-color: #1D9BF0;
     flex-direction: column;
     margin-left: 35%;
     width: 35%;
-    // position: relative;
-    // border-right: 0.1px solid grey;
 
     .tweet-box {
-      // border-bottom: 0.1px solid gray;
       padding: 2vh;
       min-width: fit-content;
       height: fit-content;
@@ -250,7 +238,6 @@
       flex-direction: column-reverse;
 
       .default-post {
-        // background-color: red;
 
         display: flex;
         border-bottom: 0.1px solid grey;
@@ -316,7 +303,6 @@
                 width: 1em;
                 height: 1em;
                 fill: grey;
-                // display: none;
               }
 
               #svg2 {
@@ -348,11 +334,9 @@
     display: none;
     margin-left: 35%;
 
-    // margin: 10px;
     .message-list {
       border: 0.1px solid grey;
       padding: 10px;
-      // background-color: pink;
       height: 100vh;
       width: 50%;
 
@@ -418,7 +402,6 @@
         #messageInput {
           width: 80%;
           border: 0.1px solid var(--grey);
-          // border-radius: 15%;
           }
     
         #sendMsg {
