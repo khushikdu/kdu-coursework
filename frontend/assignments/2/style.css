@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+:root {
+  --black: #000000;
+  --pink: #f91880;
+  --white: #ffffff;
+  --blue: #1d9bf0;
+  --grey: #808080;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+.login-page #text {
+  margin-bottom: 25px;
+  padding: 10px;
+  font-size: 34px;
+  align-items: center;
+}
+.login-page #text i {
+  font-size: 40px;
+}
+.login-page .input-box {
+  margin: 15px;
+}
+.login-page .input-box input {
+  font-size: 15px;
+  height: 3rem;
+  width: 30rem;
+  border: 2px solid var(--blue);
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--white);
+}
+.login-page .input-box ::-moz-placeholder {
+  font-size: 15 px;
+  color: var(--white);
+}
+.login-page .input-box ::placeholder {
+  font-size: 15 px;
+  color: var(--white);
+}
+.login-page .login-btn {
+  padding: 15px;
+  font-size: 20px;
+  height: 3rem;
+  margin: 15px;
+  background-color: var(--blue);
+  width: 30rem;
+  border: none;
+  border-radius: 30px;
+}
+.login-page .login-btn a {
+  text-decoration: none;
+}
+
+.main-section {
+  height: 100vh;
+}
+.main-section .navigation-section {
+  align-items: center;
+  margin-top: 1vh;
+  margin-left: 10%;
+  padding-left: 2vh;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+.main-section .navigation-section i {
+  margin-left: 1vh;
+  font-size: 1.5rem;
+}
+.main-section .navigation-section .sidebarOption {
+  display: flex;
+  margin-left: 1vh;
+  margin-top: 2vh;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+.main-section .navigation-section .sidebarOption .svg-icon {
+  width: 2em;
+  height: 2em;
+  fill: white;
+}
+.main-section .navigation-section .sidebarOption h2 {
+  padding-left: 2vh;
+  padding-bottom: 1.5vh;
+}
+.main-section .navigation-section .sidebarOption #message-btn {
+  width: auto;
+  border: none;
+  margin-left: 2vh;
+  font-size: 16px;
+  padding-bottom: 1vh;
+}
+.main-section .navigation-section .sidebarOption :hover {
+  cursor: pointer;
+}
+.main-section .navigation-section .post-btn {
+  justify-content: center;
+  width: 70%;
+  border: none;
+  border-radius: 35rem;
+  height: 2.3rem;
+  background-color: rgb(29, 155, 240);
+  color: white;
+  font-family: "Work sans", sans-serif;
+  font-weight: 500;
+  margin-top: 1.3vh;
+}
+.main-section .navigation-section .user-section {
+  margin-top: 13vh;
+  display: flex;
+  padding: 2vh;
+}
+.main-section .navigation-section .user-section .profile-img .profile-photo {
+  width: 6vh;
+  border-radius: 50%;
+}
+.main-section .navigation-section .user-section .name-username {
+  padding-left: 1vh;
+  padding-top: 0.3vh;
+}
+.main-section .navigation-section .user-section .name-username .name {
+  font-size: small;
+}
+.main-section .navigation-section .user-section .name-username .username {
+  font-size: smaller;
+  padding-top: 0.5vh;
+  color: grey;
+}
+.main-section .navigation-section .user-section .svg-icon-dots {
+  margin-left: 1.5em;
+  width: 1em;
+  height: 1em;
+  fill: white;
+}
+.main-section .post-area {
+  flex-direction: column;
+  margin-left: 35%;
+  width: 35%;
+}
+.main-section .post-area .tweet-box {
+  padding: 2vh;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.main-section .post-area .tweet-box .form-area .tweetbox-input {
+  display: flex;
+}
+.main-section .post-area .tweet-box .form-area .tweetbox-input .profile-avatar {
+  width: 5vh;
+  border-radius: 50%;
+}
+.main-section .post-area .tweet-box .form-area .tweetbox-input .input-text {
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+}
+.main-section .post-area .tweet-box .form-area .tweetbox-input .input-text::-moz-placeholder {
+  font-size: medium;
+}
+.main-section .post-area .tweet-box .form-area .tweetbox-input .input-text::placeholder {
+  font-size: medium;
+}
+.main-section .post-area .tweet-box .upload-btns {
+  margin-top: 2vh;
+  display: flex;
+}
+.main-section .post-area .tweet-box .upload-btns .upload-options {
+  width: 90%;
+  margin-left: 5vh;
+}
+.main-section .post-area .tweet-box .upload-btns .upload-options .upload-option-icons {
+  width: 1rem;
+  height: 1rem;
+  fill: #1d9bf0;
+  margin-left: 0.4rem;
+  margin-top: 0.6rem;
+}
+.main-section .post-area .tweet-box .upload-btns .post-btn .post {
+  width: 4.5rem;
+  height: 2.1rem;
+  background-color: #1d9bf0;
+  border-radius: 3.5rem;
+  border: none;
+  font-weight: bolder;
+  font-size: 15px;
+}
+.main-section .post-area .posts {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.main-section .post-area .posts .default-post {
+  display: flex;
+  border-bottom: 0.1px solid grey;
+  padding-bottom: 0.5rem;
+}
+.main-section .post-area .posts .default-post .post-picture {
+  margin: 1.5vh;
+}
+.main-section .post-area .posts .default-post .post-picture .profile-avatar {
+  width: 6vh;
+  border-radius: 50%;
+}
+.main-section .post-area .posts .default-post .post-text {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+.main-section .post-area .posts .default-post .post-text .post-name-username {
+  font-weight: 600;
+}
+.main-section .post-area .posts .default-post .post-text .post-name-username .post-username {
+  color: grey;
+  font-weight: 400;
+  font-size: small;
+}
+.main-section .post-area .posts .default-post .post-text .tweet-text {
+  align-items: center;
+}
+.main-section .post-area .posts .default-post .post-text .tweet-text .p-text-tweet {
+  font-weight: 400rem;
+  font-size: small;
+}
+.main-section .post-area .posts .default-post .post-text .tweet-text .p-text-tweet .blue-text {
+  color: #1d9bf0;
+}
+.main-section .post-area .posts .default-post .post-text .tweet-text #tweet-image {
+  width: 70%;
+}
+.main-section .post-area .posts .default-post .post-text .like-comment {
+  display: flex;
+}
+.main-section .post-area .posts .default-post .post-text .like-comment .all-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.main-section .post-area .posts .default-post .post-text .like-comment .all-icons .like-icons {
+  margin-top: 1em;
+  width: 1em;
+  height: 1em;
+  fill: grey;
+}
+.main-section .post-area .posts .default-post .post-text .like-comment .all-icons #svg1 {
+  margin-top: 1em;
+  width: 1em;
+  height: 1em;
+  fill: grey;
+}
+.main-section .post-area .posts .default-post .post-text .like-comment .all-icons #svg2 {
+  margin-top: 1em;
+  width: 1em;
+  height: 1em;
+  fill: #f91880;
+  display: none;
+}
+.main-section .post-area .posts .default-post .post-text .like-comment .upvote {
+  margin-left: 1rem;
+}
+.main-section .post-area .posts .default-post .post-text .like-comment .upvote .like-icons {
+  margin-top: 1em;
+  width: 1em;
+  height: 1em;
+  fill: grey;
+}
+.main-section .message-section {
+  display: none;
+  margin-left: 35%;
+}
+.main-section .message-section .message-list {
+  border: 0.1px solid grey;
+  padding: 10px;
+  height: 100vh;
+  width: 50%;
+}
+.main-section .message-section .message-list p {
+  font-weight: 800;
+  font-size: 18px;
+}
+.main-section .message-section .message-list .active-users {
+  padding-top: 20px;
+}
+.main-section .message-section .message-list .active-users .user {
+  display: flex;
+}
+.main-section .message-section .message-list .active-users .user img {
+  width: 50px;
+  border-radius: 50%;
+}
+.main-section .message-section .message-list .active-users .user .user-chat {
+  border: none;
+  width: 100%;
+  height: 3rem;
+  font-weight: 700;
+}
+.main-section .message-section .message-list .active-users .user .user-chat span {
+  color: var(--grey);
+}
+.main-section .message-section .chat-box {
+  border: 0.1px solid var(--grey);
+  padding: 10px;
+  height: 100vh;
+  width: 50%;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+.main-section .message-section .chat-box .username {
+  border: 0.1px solid var(--grey);
+  padding: 10px;
+}
+.main-section .message-section .chat-box .username p {
+  text-align: left;
+}
+.main-section .message-section .chat-box #chat-area {
+  height: 88%;
+  overflow-y: auto;
+}
+.main-section .message-section .chat-box #chat-area .msgRight {
+  float: right;
+}
+.main-section .message-section .chat-box #chat-area .msgLeft {
+  float: left;
+}
+.main-section .message-section .chat-box .send-message {
+  display: flex;
+}
+.main-section .message-section .chat-box .send-message #messageInput {
+  width: 80%;
+  border: 0.1px solid var(--grey);
+}
+.main-section .message-section .chat-box .send-message #sendMsg {
+  margin: 1px;
+  margin-bottom: 0px;
+  width: 15%;
+  height: 2rem;
+  background-color: #1d9bf0;
+  border-radius: 30%;
+  border: none;
+}
+
+.main-mobile {
+  display: none;
+}
+@media screen and (min-width: 1080px) and (max-width: 444) {
+  .main-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .main-section {
+    display: none;
+  }
+  .main-mobile {
+    display: block;
+    color: white;
+  }
+  .main-mobile .tweet-box {
+    border-bottom: 0.1px solid gray;
+    padding: 2vh;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .main-mobile .tweet-box .form-area .tweetbox-input {
+    display: flex;
+  }
+  .main-mobile .tweet-box .form-area .tweetbox-input .profile-avatar {
+    width: 5vh;
+    border-radius: 50%;
+  }
+  .main-mobile .tweet-box .form-area .tweetbox-input .input-text {
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+  }
+  .main-mobile .tweet-box .form-area .tweetbox-input .input-text::-moz-placeholder {
+    font-size: medium;
+  }
+  .main-mobile .tweet-box .form-area .tweetbox-input .input-text::placeholder {
+    font-size: medium;
+  }
+  .main-mobile .tweet-box .upload-btns {
+    margin-top: 2vh;
+    display: flex;
+  }
+  .main-mobile .tweet-box .upload-btns .upload-options {
+    width: 90%;
+    margin-left: 5vh;
+  }
+  .main-mobile .tweet-box .upload-btns .upload-options .upload-option-icons {
+    width: 1rem;
+    height: 1rem;
+    fill: #1d9bf0;
+    margin-left: 0.4rem;
+    margin-top: 0.6rem;
+  }
+  .main-mobile .tweet-box .upload-btns .post-btn .post {
+    width: 4.5rem;
+    height: 2.1rem;
+    background-color: #1d9bf0;
+    border-radius: 3.5rem;
+    border: none;
+    font-weight: bolder;
+    font-size: 15px;
+  }
+  .main-mobile .top-icons {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-mobile .top-icons .back-option .back-btn {
+    width: 1rem;
+    fill: white;
+  }
+  .main-mobile .top-icons .draft-post {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-mobile .top-icons .draft-post .draft {
+    padding-top: 7px;
+    color: rgb(29, 155, 240);
+    font-weight: 800;
+  }
+  .main-mobile .top-icons .draft-post .post-btn {
+    padding-left: 20px;
+  }
+  .main-mobile .top-icons .draft-post .post-btn button {
+    background-color: rgb(29, 155, 240);
+    width: 4rem;
+    height: 1.8rem;
+    border-radius: 28px;
+    border: none;
+  }
+  .main-mobile .top-icons .prof-click .image-click {
+    border-radius: 50%;
+    width: 2rem;
+  }
+  .main-mobile .top-icons .x-logo .logo-css {
+    padding-top: 0.2rem;
+    fill: white;
+    width: 1.5rem;
+  }
+  .main-mobile .top-icons .settings .logo-css {
+    padding-top: 0.2rem;
+    fill: white;
+    width: 1.4rem;
+  }
+  .main-mobile .posts-mobile .posts .default-post {
+    display: flex;
+    border-bottom: 0.1px solid grey;
+    padding-bottom: 0.5rem;
+  }
+  .main-mobile .posts-mobile .posts .default-post .post-picture {
+    margin: 1.5vh;
+  }
+  .main-mobile .posts-mobile .posts .default-post .post-picture .profile-avatar {
+    width: 6vh;
+    border-radius: 50%;
+  }
+  .main-mobile .posts-mobile .posts .default-post .post-text {
+    margin-top: 0.5rem;
+    margin-left: 0rem;
+  }
+  .main-mobile .posts-mobile .posts .default-post .post-text .post-name-username {
+    font-weight: 600;
+  }
+  .main-mobile .posts-mobile .posts .default-post .post-text .post-name-username .post-username {
+    color: grey;
+    font-weight: 400;
+    font-size: small;
+  }
+  .main-mobile .posts-mobile .posts .default-post .post-text .tweet-text .p-text-tweet {
+    font-weight: 400rem;
+    font-size: small;
+  }
+  .main-mobile .posts-mobile .posts .default-post .post-text .tweet-text .p-text-tweet .blue-text {
+    color: #1d9bf0;
+  }
+  .main-mobile .posts-mobile .posts .default-post .post-text .like-comment {
+    display: flex;
+  }
+  .main-mobile .posts-mobile .posts .default-post .post-text .like-comment .all-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .main-mobile .posts-mobile .posts .default-post .post-text .like-comment .all-icons .like-icons {
+    margin-top: 1em;
+    width: 1em;
+    height: 1em;
+    fill: grey;
+  }
+  .main-mobile .posts-mobile .posts .default-post .post-text .like-comment .upvote {
+    margin-left: 1rem;
+  }
+  .main-mobile .posts-mobile .posts .default-post .post-text .like-comment .upvote .like-icons {
+    margin-top: 1em;
+    width: 1em;
+    height: 1em;
+    fill: grey;
+  }
+  .main-mobile .posts-mobile .write-tweet {
+    margin-top: 29rem;
+    margin-left: 16rem;
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
+  .main-mobile .posts-mobile .write-tweet .write-tweet-icon {
+    padding: 1rem;
+    background-color: #1d9bf0;
+    fill: white;
+    width: 3rem;
+    border-radius: 50%;
+  }
+}
+.mob_nav {
+  z-index: 1;
+  height: 100%;
+  margin-right: 3em;
+  padding: 1em;
+  position: fixed;
+  display: none;
+}
+.mob_nav .user-section {
+  line-height: 1em;
+}
+.mob_nav .user-section .profile-img img {
+  border-radius: 50%;
+  width: 2.8em;
+  height: 2.8em;
+  margin-bottom: 1em;
+}
+.mob_nav .user-section .profile-img svg {
+  fill: rgb(238, 235, 235);
+  border-radius: 50%;
+  border: solid;
+  width: 2em;
+  height: 2em;
+  float: right;
+  margin: 0.5em;
+  border-color: rgb(87, 86, 86);
+  padding: 0.3em;
+}
+.mob_nav .user-section .name-username {
+  font-size: 1em;
+  line-height: 1.3em;
+}
+.mob_nav .user-section .username {
+  color: rgb(157, 151, 151);
+}
+.mob_nav .user-section .follow {
+  display: flex;
+  margin-top: 1em;
+  font-size: 0.8em;
+}
+.mob_nav .user-section .follow p span {
+  color: rgb(157, 151, 151);
+}
+.mob_nav .user-section .follow :nth-child(2) {
+  margin-left: 2em;
+}
+.mob_nav .sidebarOption {
+  margin: 0em;
+  display: flex;
+  margin-top: 1em;
+  font-size: 15px;
+  font-weight: 900rem;
+}
+.mob_nav .sidebarOption svg {
+  padding-top: 5px;
+  fill: rgb(209, 209, 209);
+  width: 2em;
+  height: 2em;
+}
+.mob_nav .sidebarOption h2 {
+  margin-left: 1em;
+  color: rgb(209, 209, 209);
+  line-height: 2rem;
+}/*# sourceMappingURL=style.css.map */
