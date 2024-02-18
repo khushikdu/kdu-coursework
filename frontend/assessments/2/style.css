@@ -1,0 +1,165 @@
+:root {
+  --black: #000000;
+  --blue: #1871c2;
+  --white: #ffffff;
+  --green: #008000;
+  --buy-border: #2f9e44;
+  --buy-text: #2f9e44;
+  --buy-background: #b2f2bb;
+  --sell-border: #e03131;
+  --sell-text: #e03232;
+  --sell-background: #ffc9c9;
+  --grey: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+#main {
+  margin: 5rem;
+  border: 1px solid var(--black);
+}
+#main #header {
+  background-color: var(--blue);
+  margin: 10px;
+  padding: 12px;
+  border: 1px;
+  color: var(--white);
+}
+#main #section-area {
+  display: flex;
+  margin-bottom: 20px;
+}
+#main #section-area #left-section {
+  width: 75%;
+}
+#main #section-area #left-section .sub-headers {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+#main #section-area #left-section .sub-headers #company {
+  width: 20%;
+  border: 1px solid var(--black);
+  display: flex;
+  margin: 5px;
+  justify-content: space-around;
+}
+#main #section-area #left-section .sub-headers #company #logo {
+  margin: 3px;
+}
+#main #section-area #left-section .sub-headers #company #logo img {
+  width: 3rem;
+}
+#main #section-area #left-section .sub-headers #company #title {
+  padding: 10px;
+}
+#main #section-area #left-section .sub-headers #price {
+  padding: 10px;
+  width: 20%;
+  justify-content: center;
+  margin: 5px;
+  border: 1px solid var(--black);
+  display: flex;
+}
+#main #section-area #left-section .sub-headers #price span {
+  color: var(--green);
+}
+#main #section-area #left-section .sub-headers #price #sub {
+  padding-top: 15px;
+  color: var(--black);
+  font-size: 15px;
+}
+#main #section-area #left-section .sub-headers #quantity {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#main #section-area #left-section .sub-headers #buy {
+  width: 10%;
+  border: 1px solid var(--buy-border);
+  margin: 5px;
+  text-align: center;
+  padding: 10px;
+  color: var(--buy-text);
+  background-color: var(--buy-background);
+}
+#main #section-area #left-section .sub-headers #sell {
+  width: 10%;
+  border: 1px solid var(--sell-border);
+  margin: 5px;
+  text-align: center;
+  padding: 10px;
+  color: var(--sell-text);
+  background-color: var(--sell-background);
+}
+#main #section-area #left-section #graph {
+  height: 500px;
+  border: 1px solid var(--black);
+  margin: 10px;
+  flex: 3;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+#main #section-area #left-section #graph #grids {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+#main #section-area #left-section #graph .grid-item {
+  border: 1px solid var(--black);
+  border-style: dashed;
+  background-color: transparent;
+}
+#main #section-area #right-section {
+  width: 25%;
+  border: 1px solid var(--black);
+  margin: 10px;
+}
+#main #section-area #right-section #history-section {
+  padding: 10px;
+}
+#main #section-area #right-section #transactions {
+  border: 1px solid var(--black);
+  margin: 10px;
+  padding: 8px;
+  border-radius: 10px;
+}
+#main #section-area #right-section #transactions #individual-transaction {
+  display: flex;
+}
+#main #section-area #right-section #transactions #individual-transaction #text {
+  width: 75%;
+}
+#main #section-area #right-section #transactions #individual-transaction #text #number-of-stocks {
+  font-weight: 800;
+}
+#main #section-area #right-section #transactions #individual-transaction #text #trans-details {
+  font-size: 13px;
+}
+#main #section-area #right-section #transactions #individual-transaction #operation {
+  padding: 8px;
+  color: var(--green);
+}/*# sourceMappingURL=style.css.map */
