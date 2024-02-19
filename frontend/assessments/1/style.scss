@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Work sans';
+}
+
+#main{
+    #top-header{
+        background-color: rgb(255, 179, 80);
+        padding: 1rem;
+        .logo{
+            font-size: 50px;
+            color: white;
+            font-weight: 900rem;
+            margin-left: 6rem;
+        }
+    }
+    #navigation-bar{
+        background-color: black;
+        color: white;
+        font-size: 22px;
+        
+        // height: 2rem;
+        #ul-bar{
+            margin-left: 6rem;
+            display: flex;
+            
+            .nav-items{
+                
+                padding: 1rem;
+            }
+        }
+    }
+    #tagline{
+        background-image: url('Re-Assessment Asset.jpg');
+        // height: 50rem;
+        width: 100%;
+        height: 40vh;
+        background-position: center; 
+        background-size: cover;
+        p{
+            font-size: 65px;
+            font-weight: 900rem;
+            color: white;
+            padding: 8rem;
+            text-align: center;
+        }
+    }
+    #bottom{
+        display: flex;
+        background-color: rgb(232, 214, 214);
+        text-align: justify;
+        color: rgb(58, 54, 54);
+        #welcome{
+            margin: 2rem;
+            padding-left: 4.5rem;
+
+            #headtext{
+                line-height: 150%;
+                padding-bottom: 1rem;
+            }
+            #body-text{
+                line-height: 150%;
+            }
+        }
+        #left-items{
+            margin: 1rem;
+            margin-right: 4rem;
+            padding: 1rem 0.5rem 1rem 0.5rem;
+            background-color: rgb(74, 73, 73);
+            height: max-content;
+            color: white;
+            line-height: 170%;
+        }
+    }
+    #footer{
+        color: white;
+        #footer-data{
+            background-color: rgb(74, 73, 73);
+            margin: 2px;
+            position: sticky;
+            margin-bottom: 0;
+            padding: 1rem;
+            text-align: center;
+        }
+    }
+}
+
+
+@media screen and (min-width: 767px) and (max-width: 1367px) {    #main{
+        #top-header{
+            background-color: rgb(255, 179, 80);
+            padding: 1rem;
+            .logo{
+                font-size: 35px;
+                color: white;
+                font-weight: 900rem;
+                margin-left: 6rem;
+            }
+        }
+        #navigation-bar{
+            background-color: black;
+            color: white;
+            font-size: 22px;
+            
+            // height: 2rem;
+            #ul-bar{
+                margin-left: 6rem;
+                display: flex;
+                
+                .nav-items{
+                    
+                    padding: 1rem;
+                }
+            }
+        }
+        #tagline{
+            background-image: url('Re-Assessment Asset.jpg');
+            // height: 50rem;
+            width: 100%;
+            height: 40vh;
+            background-position: center; 
+            background-size: cover;
+            p{
+                font-size: 50px;
+                font-weight: 900rem;
+                color: white;
+                padding: 4rem;
+                text-align: center;
+            }
+        }
+        #bottom{
+            display: flex;
+            background-color: rgb(232, 214, 214);
+            text-align: justify;
+            color: rgb(58, 54, 54);
+            #welcome{
+                margin: 2rem;
+                padding-left: 4.5rem;
+    
+                #headtext{
+                    line-height: 150%;
+                    padding-bottom: 1rem;
+                }
+                #body-text{
+                    line-height: 150%;
+                }
+            }
+            #left-items{
+                margin: 1rem;
+                margin-right: 4rem;
+                padding: 1rem 0.5rem 1rem 0.5rem;
+                background-color: rgb(74, 73, 73);
+                height: max-content;
+                color: white;
+                line-height: 170%;
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 768px)  {    #main{
+    #top-header{
+        background-color: rgb(255, 179, 80);
+        padding: 1rem;
+        .logo{
+            font-size: 35px;
+            color: white;
+            font-weight: 900rem;
+            margin-left: 6rem;
+        }
+    }
+    #navigation-bar{
+        background-color: black;
+        color: white;
+        font-size: 22px;
+        
+        // height: 2rem;
+        #ul-bar{
+            margin-left: 6rem;
+            display: flex;
+            
+            .nav-items{
+                
+                padding: 1rem;
+            }
+        }
+    }
+    #tagline{
+        background-image: url('Re-Assessment Asset.jpg');
+        // height: 50rem;
+        width: 100%;
+        height: 40vh;
+        background-position: center; 
+        background-size: cover;
+        p{
+            font-size: 50px;
+            font-weight: 900rem;
+            color: white;
+            padding: 4rem;
+            text-align: center;
+        }
+    }
+    #bottom{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(232, 214, 214);
+        text-align: justify;
+        color: rgb(58, 54, 54);
+        #welcome{
+            margin: 4rem ;
+            padding-left: 2.5rem;
+            margin-bottom: 0;
+
+            #headtext{
+                line-height: 150%;
+                padding-bottom: 1rem;
+            }
+            #body-text{
+                line-height: 150%;
+            }
+        }
+        #left-items{
+
+            margin-top: 1rem;
+            margin: 4rem 3rem 1rem 4.5rem;
+            padding: 1rem 0.5rem 1rem 2rem;
+            background-color: rgb(74, 73, 73);
+            height: max-content;
+            color: white;
+            line-height: 170%;
+        }
+    }
+}
+
+}
