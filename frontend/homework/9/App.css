@@ -1,0 +1,32 @@
+.app-file{
+    background-color: #ffe68c;
+    margin: 7rem;
+    padding: 1rem;
+    border: 1px solid black
+
+    
+}
+.column-data{
+    display: flex;
+}
+
+#headings{
+    color: #d69d30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid{
+    padding: 10px;
+    margin: 15px;
+    width: 50%;
+    height: 40vh;
+    border: 1px solid #f0b247;
+}
+
+li{
+    color: #2a923e;
+    list-style: none;
+    line-height: 170%;
+}
