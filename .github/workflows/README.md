@@ -1,2 +1,1 @@
-All your Github acti
-on workflows go here.
+All your Github action workflows go here.
