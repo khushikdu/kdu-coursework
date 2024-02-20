@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:wght@100&display=swap');
+
 .app-file{
     background-color: #ffe68c;
-    margin: 7rem;
+    margin: 0 auto;
     padding: 1rem;
-    border: 1px solid black
-
-    
+    border: 1px solid black;
+    height: 100vh;
+    font-weight: 700;
+    font-family: 'Caveat', cursive;
 }
 .column-data{
     display: flex;
