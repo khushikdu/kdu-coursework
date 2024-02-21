@@ -1,0 +1,32 @@
+.quote-container{
+    background-color: #0C359E;
+    text-align: center;
+    margin: 3rem 15rem;
+    padding: 1rem;
+    color:#ffffff;
+    border-radius: 25px;
+    h1{
+        padding: 2rem 5rem;
+    }
+    p{
+        text-align: right;
+    }
+
+    .tags{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        text-align: left;
+        color: #000000;
+        button{
+            margin: 10px;
+            border: none;
+            background-color: #EE99C2;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        :hover{
+            cursor: pointer;
+        }
+    }
+}
