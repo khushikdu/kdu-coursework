@@ -8,22 +8,12 @@ function App() {
   const [quotes,setQuotes]=useState <ApiQuote[]> ([]);
   const [allQuotes, setAllQuotes]=useState <ApiQuote[]> ([]);
   const [selectedTag,setSelectedTag]=useState<string[]> ([]);
-
-  // use effect to view only those quotes which has the required tags
-  useEffect(()=>{
-    setQuotes(
-      allQuotes.filter((quote)=>{
-        return selectedTag.every((tag)=>quote.tags.includes(tag))
-      })
-    );
-  },[selectedTag,allQuotes]);
   
   //fetching new data from the button
   const fetchDataBtn=()=>{
     fetch('https://api.quotable.io/quotes/random')
     .then((response)=>response.json())
     .then((data:ApiQuote[])=>{
-      console.log("type:",typeof data);
         setAllQuotes([...data,quotes[0],quotes[1]])
       });
   }
@@ -37,6 +27,15 @@ function App() {
       });
   },[]);
 
+  // use effect to view only those quotes which has the required tags
+  useEffect(()=>{
+    setQuotes(
+      allQuotes.filter((quote)=>{
+        return selectedTag.every((tag)=>quote.tags.includes(tag))
+      })
+    );
+  },[selectedTag,allQuotes]);
+
   //to add the selected tags to the list
   const onSelectTag=(tag:string)=>{
       if(!selectedTag.includes(tag)){
@@ -44,19 +43,20 @@ function App() {
     }
   }
 
+  //to delete the selected tags from the list
   const onDeleteTag=(tag:string)=>{
-    console.log("here");
-    
     setSelectedTag(selectedTag.filter((existingtag)=>existingtag!==tag))
   }
+
   return (
     <div className='class-container'>
       <div className="header">
-      <button onClick={()=>{
-      fetchDataBtn()
-    }}>NEW QUOTE</button><br />
-      {
-        <div className="filterlist">
+      <button onClick={()=>{fetchDataBtn()}}>
+        NEW QUOTE
+      </button>
+      <br />
+      
+      <div className="filterlist">
           <ul className="sel-tags"> 
           <p>Filter</p> 
             {
@@ -69,8 +69,8 @@ function App() {
               )})
             }
           </ul>
-        </div>
-      }
+      </div>
+      
       </div>
 
       {quotes.map((quote)=>{
