@@ -35,11 +35,5 @@ export function ScrollToTop() {
       <h1>Scroll to top using useRef</h1>
       <p id="body">{paragraphs}</p>
     </div>
-    // <div className="sc" ref={windowRef}>
-    //   <p>{paragraphs}</p>
-    //   <button className="scroll-to-top" onClick={scrollToTop}>
-    //     Scroll to Top
-    //   </button>
-    // </div>
   );
 }
