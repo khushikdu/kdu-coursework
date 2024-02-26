@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ProductList } from "../src/pages/ProductList";
-import { ProductDetails } from "../src/pages/ProductDetails";
+import { ProductList } from "./components/ProductList";
+import { ProductDetails } from "./components/ProductDetails";
 import "./App.css";
 import { useEffect, useState, createContext, useMemo } from "react";
 import { ProductDetailsType } from "./types/ProductDetailsType";
