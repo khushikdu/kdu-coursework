@@ -1,0 +1,16 @@
+npm create vite@latest react-redux-todo -- --template react-ts
+cd react-redux-todo
+npm install
+npm i @reduxjs/toolkit
+npm i react-redux
+npm run dev
+npm i redux-persist
+npm install cypress --save-dev
+open: npx cypress open
+npm install vite@^4.0.0
+npm install -D vite
+npx cypress open --template ts
+npm install -D vitest
+npm install --save-dev vitest
+npm install --save-dev jsdom
+npm install --save-dev @types/jest
