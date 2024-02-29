@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:wght@100&display=swap');
+.skill-set{
+    background-color: #9bd2ff;
+}
+#headings{
+    font-weight: 700;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+}
