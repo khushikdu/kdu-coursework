@@ -4,6 +4,7 @@ import "./App.scss";
 import { Timer } from "./components/Timer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { Form } from "./components/Form";
+import { Persist } from "./components/Persist";
 
 function App() {
   const windowRef = useRef<HTMLDivElement | null>(null);
@@ -18,10 +19,11 @@ function App() {
   };
   return (
     <div className="App" ref={windowRef}>
-      <Form/>
+      <Form />
       <Timer />
+      <Persist />
       <ScrollToTop />
-      <div className="sc" >
+      <div className="sc">
         <button className="scroll-to-top" onClick={scrollToTop}>
           Scroll to Top
         </button>
