@@ -9,7 +9,7 @@ test("deletes items to the list", () => {
     <Provider store={store}>
       <Body />
     </Provider>
-  ); 
+  );
 
   // checking the functionality of add button
   const inputField = screen.getByTestId("input-field");
@@ -56,8 +56,6 @@ test("add items to the list", () => {
       <Body />
     </Provider>
   );
-
-  // checking the functionality of add button
   const inputField = screen.getByTestId("input-field");
   const addBtnField = screen.getByTestId("add-btn");
   fireEvent.change(inputField, { target: { value: "Adding item" } });

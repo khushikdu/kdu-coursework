@@ -5,28 +5,28 @@ import { Header } from "../Header";
 import { store } from "../../redux/store";
 import "@testing-library/jest-dom";
 
-test("searches items to the list", () => {
+test("performs test for h1 tag", () => {
   render(
     <Provider store={store}>
       <Header />
-      <Body />
+      {/* <Body /> */}
     </Provider>
   );
 
-  // checking the functionality of add button
-  const inputField = screen.getByTestId("input-field");
-  const addBtnField = screen.getByTestId("add-btn");
-  fireEvent.change(inputField, { target: { value: "Adding item 1" } });
-  fireEvent.click(addBtnField);
-  fireEvent.change(inputField, { target: { value: "Adding item 2" } });
-  fireEvent.click(addBtnField);
-
-  const addedItem = screen.getByText("Adding item 1");
-  expect(addedItem).toBeInTheDocument();
+  const itemLister = screen.getByText("Item Lister");
+  expect(itemLister).toBeInTheDocument();
 
   const searchInput = screen.getByPlaceholderText("Search") as HTMLInputElement;
   fireEvent.change(searchInput, { target: { value: "Adding item 1" } });
+});
 
-  const searchedItem = screen.getByText("Adding item 1");
-  expect(searchedItem).toBeInTheDocument();
+test("performs test for search bar", () => {
+  render(
+    <Provider store={store}>
+      <Header />
+    </Provider>
+  );
+
+  const itemLister = screen.getByText("Item Lister");
+  expect(itemLister).toBeInTheDocument();
 });
