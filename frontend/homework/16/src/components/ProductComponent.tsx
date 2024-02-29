@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getProducts } from "../redux/thunk/getProducts";
 import "../styles/ProductComponent.scss";
-import { showSuccessSnackbar } from "../actions/actions";
 
 export function ProductComponent() {
   const dispatch: AppDispatch = useDispatch();
@@ -12,6 +11,7 @@ export function ProductComponent() {
   const loadingStatus = useSelector(
     (state: RootState) => state.products.status
   );
+
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
@@ -27,8 +27,6 @@ export function ProductComponent() {
       </div>
     );
   } else if (loadingStatus === "fullfilled") {
-    dispatch(showSuccessSnackbar("Success!"));
-
     console.log("hetre");
     return (
       <div className="landing-page">

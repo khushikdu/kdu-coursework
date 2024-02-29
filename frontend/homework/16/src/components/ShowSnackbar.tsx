@@ -1,8 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../redux/store";
 import { clearSnackbar } from "../actions/actions";
-import { Icon, IconButton } from "@mui/material";
-import Snackbar from "@material-ui/core/Snackbar";
+import { Icon } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import Snackbar from "@mui/material/Snackbar";
 
 export function ShowSnackbar() {
   const dispatch: AppDispatch = useDispatch();
@@ -18,7 +19,7 @@ export function ShowSnackbar() {
     <Snackbar
       anchorOrigin={{
         vertical: "bottom",
-        horizontal: "left",
+        horizontal: "center",
       }}
       open={successSnackbarOpen}
       autoHideDuration={4000}
@@ -29,12 +30,7 @@ export function ShowSnackbar() {
           backgroundColor: "green",
         },
       }}
-      message={
-        <span id="client-snackbar">
-          <Icon>check_circle</Icon>
-          {successSnackbarMessage}
-        </span>
-      }
+      message={<span id="client-snackbar">{successSnackbarMessage}</span>}
       action={[
         <IconButton
           key="close"
@@ -42,7 +38,7 @@ export function ShowSnackbar() {
           color="inherit"
           onClick={handleClose}
         >
-          <Icon>close</Icon>
+          <Icon>x</Icon>
         </IconButton>,
       ]}
     />
