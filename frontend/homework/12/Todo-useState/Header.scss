@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    align-items: center;
+    background-color: #28a745;
+    padding: 10px 70px;
+    justify-content: space-between;
+    // padding: 10px;
+    h1{
+        font-size: 40px;
+        color: #ffffff;
+        // margin: auto;
+    }
+    input{
+        height: 2rem;
+        width: 30%;
+    }
+}

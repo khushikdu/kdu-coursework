@@ -1,0 +1,45 @@
+.todo-section{
+    padding: 3rem;
+    input{
+        height: 1.7rem;
+        margin: 2px;
+        border-radius: 5px;
+        border: 0.1px solid #d1d0d0;
+    }
+    .add-btn{
+        width: 5rem;
+        height: 2rem;
+        background-color: #343a40;
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        margin: 2px;
+    }
+    p{
+        font-size: 16px;
+    }
+    
+    .search-list{
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-around;
+        border-radius: 5px;
+        // border: 0.1px solid #343a40;
+        padding: 10px;
+        list-style-type: none;
+        .list-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #d1d0d0;
+            padding: 15px;
+            .delete-btn{
+                padding: 5px;
+                background-color: red;
+                border: none;
+                color: white;
+                border-radius: 5px;
+            }
+        }
+    }
+}
