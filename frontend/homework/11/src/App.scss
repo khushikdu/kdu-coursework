@@ -1,0 +1,48 @@
+.class-container{
+    .header{
+        margin:  3rem 15rem;
+
+        .filterlist{
+            height: 3rem;
+            border-bottom: 1px solid #000;
+            .sel-tags{
+                padding-left: 0;
+                display: flex;
+                .tag-btns{
+
+                    margin: 10px;
+                    height: 1.3rem;
+                    border: none;
+                    background-color: #FFE3CA;
+                    padding: 10px;
+                    border-radius: 20px;
+                    .remove{
+                        height: min-content;
+                        width: min-content;
+                        color: #000;
+                        .md-close:hover{
+                            cursor: pointer;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        button{
+            background-color: #FFE3CA;
+            height: 3rem;
+            width: 10rem;
+            border: none;
+            color: blue;
+        }
+        :hover{
+            cursor: pointer;
+        }
+        input{
+            
+            width: max-content;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+    }
+}
