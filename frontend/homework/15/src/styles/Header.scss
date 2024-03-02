@@ -1,0 +1,16 @@
+.header{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    background-color: #28a745;
+    padding: 10px 70px;
+    justify-content: space-between;
+    h1{
+        font-size: 40px;
+        color: #ffffff;
+    }
+    input{
+        height: 2rem;
+        width: 30%;
+    }
+}
