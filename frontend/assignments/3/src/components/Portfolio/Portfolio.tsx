@@ -46,11 +46,11 @@ export function Portfolio() {
       const stockNameMatch =
         filter.selectedStocks.length === 0 ||
         filter.selectedStocks.includes(transaction.stock_name);
-        
+
       const stockSymbolFilterMatch =
         filter.stockSymbolFilter.length === 0 ||
         filter.stockSymbolFilter.includes(transaction.stock_symbol);
-  
+
       const startDateMatch =
         !filter.startDate ||
         new Date(transaction.timestamp) >= new Date(filter.startDate);
@@ -97,21 +97,24 @@ export function Portfolio() {
 
   return (
     <div style={{}}>
-      <div style={{position:"sticky", top:8, zIndex:"10"}}>
-      <Header />
+      <div style={{ position: "sticky", top: 8, zIndex: "10" }}>
+        <Header />
       </div>
       <div className="main" style={{ ...styles.main, display: "flex" }}>
         <Filter />
-        <div className="table" style={{ width: "75%",position: "sticky",
-    top: 70, zIndex:"0"}}>
-          <TableContainer component={Paper} style={{marginTop:"2rem"}}>
-            <Table >
+        <div
+          className="table"
+          style={{ width: "75%", position: "sticky", top: 70, zIndex: "0" }}
+        >
+          <TableContainer component={Paper} style={{ marginTop: "2rem" }}>
+            <Table>
               <TableHead>
-                <TableRow >
+                <TableRow>
                   <TableCell>Date</TableCell>
                   <TableCell>Stock Name</TableCell>
                   <TableCell>Stock Symbol</TableCell>
                   <TableCell>Transaction Price</TableCell>
+                  <TableCell>Time</TableCell>
                   <TableCell>Status</TableCell>
                 </TableRow>
               </TableHead>
@@ -121,7 +124,7 @@ export function Portfolio() {
                   .map(([date, dateTransactions]) => (
                     <React.Fragment key={date}>
                       <TableRow>
-                        <TableCell colSpan={5} style={{ fontWeight: "bold" }}>
+                        <TableCell colSpan={6} style={{ fontWeight: "bold" }}>
                           {date}
                         </TableCell>
                       </TableRow>
@@ -131,6 +134,15 @@ export function Portfolio() {
                           <TableCell>{transaction.stock_name}</TableCell>
                           <TableCell>{transaction.stock_symbol}</TableCell>
                           <TableCell>{transaction.transaction_price}</TableCell>
+                          <TableCell>
+                            {new Date(transaction.timestamp).toLocaleTimeString(
+                              [],
+                              {
+                                hour: "2-digit",
+                                minute: "2-digit",
+                              }
+                            )}
+                          </TableCell>
                           <TableCell>
                             <IconButton>
                               <FiberManualRecordIcon

@@ -2,13 +2,12 @@ import express from "express";
 import http from "http";
 import { Server } from "socket.io";
 import cors from "cors";
-import { log } from "console";
 
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "http://localhost:5174",
     methods: ["GET", "POST"],
   },
 });
@@ -44,7 +43,6 @@ io.on("connection", (socket) => {
     });
   });
   socket.on("buyStock", ({ symbol, quantity }) => {
-    const stockPrice = userWallets[socket.id].stocks[symbol] || 0;
 
     if (quantity > 0) {
       const totalPrice = quantity * stockCurrentPrice;
@@ -74,7 +72,6 @@ io.on("connection", (socket) => {
   });
 
   socket.on("sellStock", ({ symbol, quantity }) => {
-    const stockPrice = userWallets[socket.id].stocks[symbol] || 0;
     const availableStocks = userWallets[socket.id].stocks[symbol] || 0;
 
     if (availableStocks >= quantity && quantity > 0) {

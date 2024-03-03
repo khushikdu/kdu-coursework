@@ -2,8 +2,6 @@ import { CSSProperties } from "react";
 
 export const styles: { [key: string]: CSSProperties } = {
   main: {
-    // margin: "0 5rem 0rem 5rem",
-    // border: "1px solid black",
     fontFamily: "Poppins",
   },
   allStocksFromStore: {

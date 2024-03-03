@@ -12,13 +12,13 @@ export const styles: { [key: string]: CSSProperties } = {
     backgroundColor: "#e9edee",
     position: "sticky",
     top: 100,
-    zIndex: 2, // Set a higher zIndex for the filter
+    zIndex: 2,
     color: "grey",
     borderRadius: "15px",
     fontSize: "18px",
   },
   filterSection: {
-    zIndex: 3, // Set a higher zIndex for the filter
+    zIndex: 3,
     borderBottom: "1px solid grey",
     padding: "10px",
     height: "max-content",

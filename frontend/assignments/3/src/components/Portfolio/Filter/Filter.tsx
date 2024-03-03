@@ -1,7 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
-import { setFilter, clearFilter, setFilterPartial } from "../../../redux/transactionSlice";
+import {
+  setFilter,
+  clearFilter,
+  setFilterPartial,
+} from "../../../redux/transactionSlice";
 import { styles } from "./Filter.styles";
 import { StockSymbol } from "../../../utils/transactionType";
 
@@ -11,14 +15,13 @@ const Filter: React.FC = () => {
   const transactions = useSelector(
     (state: RootState) => state.transaction.transactions
   );
-  
+
   const handleStockSymFilterChange = (stockSymbol: StockSymbol) => {
     const updatedSelectedStocks = filter.selectedStocks.includes(stockSymbol)
       ? filter.selectedStocks.filter((symbol) => symbol !== stockSymbol)
       : [...filter.selectedStocks, stockSymbol];
 
     dispatch(setFilterPartial({ selectedStocks: updatedSelectedStocks }));
-
   };
 
   const handleFilterInputChange = (value: string) => {
@@ -126,9 +129,11 @@ const Filter: React.FC = () => {
           />
         </div>
       </div>
-     
-      <div className="filter-section" style={{...styles.filterSection,
-      borderBottom:"none"}}>
+
+      <div
+        className="filter-section"
+        style={{ ...styles.filterSection, borderBottom: "none" }}
+      >
         <label>Stocks: </label>
         {Object.values(StockSymbol).map((stockSymbol) => (
           <div key={stockSymbol}>

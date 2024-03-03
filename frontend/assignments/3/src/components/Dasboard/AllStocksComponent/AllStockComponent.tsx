@@ -8,12 +8,10 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import IconButton from "@mui/material/IconButton";
 import AddIcon from "@mui/icons-material/Add";
-import DoneIcon from "@mui/icons-material/Done";  
+import DoneIcon from "@mui/icons-material/Done";
 import ClearIcon from "@mui/icons-material/Clear";
 import { addCart, removeFromCart } from "../../../redux/stockSlice";
 import { Link } from "react-router-dom";
-
-
 
 const ITEMS_PER_PAGE = 7;
 
@@ -31,9 +29,6 @@ const AllStockComponents: React.FC = () => {
   const [list, setList] = useState<StockDetails[]>([...stocks]);
 
   const [addedStocks, setAddedStocks] = useState<string[]>([]);
-    
-
-
 
   useEffect(() => {
     dispatch(stockthunk());
@@ -71,6 +66,19 @@ const AllStockComponents: React.FC = () => {
       setAddedStocks((prev) => [...prev, stock.stock_name]);
     }
   };
+
+  const handleWatchlistClick = (stock: StockDetails) => {
+    if (addedStocks.includes(stock.stock_name)) {
+      dispatch(removeFromCart(stock));
+      setAddedStocks((prev) =>
+        prev.filter((stockName) => stockName !== stock.stock_name)
+      );
+    } else {
+      dispatch(addCart(stock));
+      setAddedStocks((prev) => [...prev, stock.stock_name]);
+    }
+  };
+
   const handleTabClick = (section: string) => {
     setActiveSection(section);
   };
@@ -78,19 +86,16 @@ const AllStockComponents: React.FC = () => {
   return (
     <div>
       <div style={styles.main}>
-
         <div className="exploreWatchlist" style={styles.exploreWatchlist}>
           <button
-          style={styles.buttonStyle}
-            // style={{...styles.buttonStyle,borderBottom: isPressed ? "2px solid blue" : "none",}}
+            style={styles.buttonStyle}
             onClick={() => handleTabClick("explore")}
             className={activeSection === "explore" ? "activeTab" : ""}
           >
             Explore
           </button>
           <button
-          style={styles.buttonStyle}
-            // style={{...styles.buttonStyle,borderBottom: isPressed ? "2px solid blue" : "none",}}
+            style={styles.buttonStyle}
             onClick={() => handleTabClick("watchlist")}
             className={activeSection === "watchlist" ? "activeTab" : ""}
           >
@@ -111,30 +116,31 @@ const AllStockComponents: React.FC = () => {
             <p>Loading...</p>
           ) : (
             <>
-             {
-                  <div className="row" style={styles.row}>
-                    <div className="stockCell" style={{...styles.stockCell, margin:"0 3rem"}}>
-                      <div>Company</div>
-                      <div>Base Price</div>
-                    </div>
-                    <div
-                      className="watchlist"
-                      style={{
-                        width: "20%",
-                        marginTop: "15px",
-                        fontSize: "18px",
-                      }}
-                    >
-                      Watchlist
-                    </div>
+              {
+                <div className="row" style={styles.row}>
+                  <div
+                    className="stockCell"
+                    style={{ ...styles.stockCell, margin: "0 3rem" }}
+                  >
+                    <div>Company</div>
+                    <div>Base Price</div>
                   </div>
-                }
+                  <div
+                    className="watchlist"
+                    style={{
+                      width: "20%",
+                      marginTop: "15px",
+                      fontSize: "18px",
+                    }}
+                  >
+                    Watchlist
+                  </div>
+                </div>
+              }
               <div
                 className="allStocksFromStore"
                 style={styles.allStocksFromStore}
-              >
-               
-              </div>
+              ></div>
 
               <div
                 className="allStocksFromStore"
@@ -185,7 +191,10 @@ const AllStockComponents: React.FC = () => {
                     {activeSection === "watchlist" &&
                       addedStocks.includes(stock.stock_name) && (
                         <div className="doneIcon">
-                          <DoneIcon style={styles.doneIcon}/>
+                          <DoneIcon
+                            style={styles.doneIcon}
+                            onClick={() => handleWatchlistClick(stock)}
+                          />
                         </div>
                       )}
                   </div>

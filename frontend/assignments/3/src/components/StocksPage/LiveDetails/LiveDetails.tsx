@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { styles } from "./LiveDetails.styles";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
 import { Candlestick } from "./Candlestick/Candlestick";
 import io from "socket.io-client";
+import { Transactions } from "../../../utils/transactionType";
+import { useDispatch, useSelector } from "react-redux";
+import { addTransaction } from "../../../redux/transactionSlice";
+import { Status } from "../../../utils/transactionType";
+import { StockName } from "../../../utils/StockName";
+import { StockSymbol } from "../../../utils/enums/StockSymbol";
+
 
 export function StockDropdown() {
+  const dispatch = useDispatch();
+  const transactions = useSelector(
+    (state: RootState) => state.transaction.transactions
+  );
   const [socket, setSocket] = useState(null);
   const [userTransactions, setUserTransactions] = useState([]);
   const [broadcastedTransactions, setBroadcastedTransactions] = useState([]);
@@ -98,7 +108,13 @@ export function StockDropdown() {
       const action = match[2];
       const timestamp = match[3];
       const dateObject = new Date(timestamp);
-      const formattedTime = dateObject.toLocaleTimeString();
+
+      const formattedTime = dateObject.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+        hourCycle: "h23",
+      });
 
       return { quantity, action, timestamp, formattedTime };
     }

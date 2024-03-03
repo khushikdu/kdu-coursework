@@ -46,6 +46,9 @@ const transactionSlice = createSlice({
     clearFilter: (state) => {
       state.filter = initialState.filter;
     },
+    addTransaction:(state,action:PayloadAction<Transactions>)=>{
+      state.transactions.push(action.payload);
+    }
   },
   extraReducers(builder) {
     builder
@@ -61,5 +64,5 @@ const transactionSlice = createSlice({
   },
 });
 
-export const { setTransactions, setFilter, clearFilter } = transactionSlice.actions;
+export const { setTransactions, setFilter, clearFilter, addTransaction } = transactionSlice.actions;
 export default transactionSlice.reducer;
