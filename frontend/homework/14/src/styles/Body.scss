@@ -1,0 +1,53 @@
+.todo-section{
+    padding: 3rem;
+    input{
+        padding: 5px;
+        height: 1.7rem;
+        margin: 2px;
+        border-radius: 5px;
+        border: 0.1px solid #d1d0d0;
+    }
+    .add-btn{
+        width: 5rem;
+        height: 2rem;
+        background-color: #343a40;
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        margin: 2px;
+    }
+    p{
+        font-size: 16px;
+    }
+    
+    .search-list{
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        padding: 10px;
+        list-style-type: none;
+        .list-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #d1d0d0;
+            padding: 15px;
+            .item-checkbox{
+                display: flex;
+                font-size: 22px; 
+                p{
+                    padding: 3px;
+                    font-size: 22px;
+                    margin-left: 2rem;
+                }               
+            }
+            .delete-btn{
+                padding: 5px;
+                background-color: #ff0000;
+                border: none;
+                color: #ffffff;
+                border-radius: 5px;
+            }
+        }
+    }
+}
