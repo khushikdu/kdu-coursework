@@ -10,6 +10,7 @@ import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -23,14 +24,14 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 @SpringBootTest
 @AutoConfigureMockMvc
 @ComponentScan(basePackages = "com.kdu.caching")
 public class GeoCodingImpTest {
     private static Object expectedGeoCodingApiResponse;
     private static Object expectedReverseGeoCodingApiResponse;
-    private static String geoCodingTestUrl;
-    private static String reverseGeoCodingTestUrl;
+
     @Autowired
     private MockMvc mockMvc;
     @Autowired
@@ -40,11 +41,13 @@ public class GeoCodingImpTest {
      * Negative test case for the geocoding endpoint with an invalid address.
      * The request is intentionally made with an invalid address to check for a negative response.
      *
+
      * @throws Exception If an error occurs during the tests.
      */
     @Test
     @Order(4)
     public void testGetGeoCodeNegative() {
+
         int resultCode = HttpStatus.OK.value();
         try {
             MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/geocoding")
@@ -76,7 +79,9 @@ public class GeoCodingImpTest {
      */
     @Test
     @Order(1)
+
     public void testGetReverseGeoCodeNegative() {
+
         int resultCode = HttpStatus.OK.value();
         try {
             MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/reverse-geocoding")
@@ -108,7 +113,7 @@ public class GeoCodingImpTest {
      * @throws Exception If an error occurs during the tests.
      */
     @Test
-    @Order(2)
+
     public void testGetGeoCode() throws Exception {
         MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/geocoding")
                         .param("address", "delhi")
@@ -150,6 +155,7 @@ public class GeoCodingImpTest {
      */
     @Test
     @Order(2)
+
     public void testGetReverseGeoCode() throws Exception {
         MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/reverse-geocoding")
                         .param("latitude", "37.431155")
@@ -185,6 +191,7 @@ public class GeoCodingImpTest {
      */
     @Test
     @Order(3)
+
     public void testGeoCodingCacheHitWithEndpoint() throws Exception {
         // Call the endpoint with a specific address
         // First request, cache should miss
@@ -208,6 +215,7 @@ public class GeoCodingImpTest {
      */
     @Test
     @Order(4)
+
     public void testReverseGeoCodingCacheHitWithEndpoint() throws Exception {
         ArrayList<Double> keyForCache = new ArrayList<>(List.of(37.431155, -120.781462));
 
@@ -237,6 +245,7 @@ public class GeoCodingImpTest {
      */
     @Test
     @Order(5)
+
     public void testGeoCodingCacheMiss() throws Exception {
         // Call the method with a specific address (First time)
         hitGeoCodingCache("goa");
@@ -253,6 +262,7 @@ public class GeoCodingImpTest {
      */
     @Test
     @Order(6)
+
     public void testGeoCodingCacheEviction() throws Exception {
         // Call the method with address goa
         hitGeoCodingCache("goa");
@@ -294,6 +304,7 @@ public class GeoCodingImpTest {
     @BeforeAll
     public static void setup(@Value("${geocoding-url}") String geoCodingUrl,
                              @Value("${reverse-geocoding-url}") String reverseGeoCodingUrl) {
+
         geoCodingTestUrl = geoCodingUrl;
         reverseGeoCodingTestUrl = reverseGeoCodingUrl;
 
@@ -304,6 +315,7 @@ public class GeoCodingImpTest {
 
         expectedReverseGeoCodingApiResponse = restTemplate.getForObject(
                 reverseGeoCodingTestUrl,
+
                 Object.class);
     }
 }

@@ -5,6 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
+
         <version>2.7.8</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
@@ -14,6 +15,7 @@
     <name>TryingJWTalone</name>
     <description>This is JWT and stuff.</description>
     <properties>
+
         <java.version>11</java.version>
     </properties>
     <dependencies>
@@ -52,16 +54,19 @@
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
+
             <version>0.11.5</version>
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-impl</artifactId>
+
             <version>0.11.5</version>
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-jackson</artifactId>
+
             <version>0.11.5</version>
         </dependency>
         <dependency>
@@ -78,6 +83,7 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -94,7 +100,7 @@
                     </excludes>
                 </configuration>
             </plugin>
-        </plugins>
+      </plugins>
     </build>
 
 </project>
