@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./login.js"></script>
+</head>
+<body>
+    <!-- Login page starts -->
+
+    <div class="login-page">
+
+        <form action="" id="login-form" onsubmit="login()">
+            <div id="text">
+                Login to 
+                <i class="fab fa-x-twitter"></i>
+            </div>
+            
+            
+            <div class="input-box" >
+                <input type="text" placeholder="Username" id="login_username">
+            </div>
+            
+            
+            <div class="input-box" >
+                <input type="password" placeholder="Password" id="login_password">
+            </div>
+            
+            
+            <a href="index.html">
+                <div class="login-btn" onclick="loginUser(event)">Log In</div>
+            </a>
+            
+        </form>
+    </div>
+    <!-- Login page ends -->
+</body>
+</html>
