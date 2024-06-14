@@ -27,6 +27,7 @@ jobs:
       - name: SonarQube Scan
         run: |
 
+
           cd ./frontend/assignments/2 && sonar-scanner \
             -Dsonar.projectKey=${{ secrets.KDUER_NAME }}-FE-Assignment-2 \
             -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
@@ -50,6 +51,7 @@ jobs:
           PERSONAL_ACCESS_TOKEN_GITHUB: ${{ secrets.PERSONAL_ACCESS_TOKEN_GITHUB }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
 
           SONAR_PROJECT_KEY: ${{ secrets.KDUER_NAME }}-FE-Assignment-2
           USERNAME_GITHUB: ${{ secrets.USERNAME_GITHUB }}
