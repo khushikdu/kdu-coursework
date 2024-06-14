@@ -41,7 +41,7 @@ public class MainTest {
         Coins coinFour = new Coins(3, "Solana", "SOL", 1000.0, 150L);
 
         coins.add(coinOne);
-        coins.add(coinTwo);
+        coins.add(coinTw/home/lenovo/KDU/kdu-new/kdu-coursework/.github/workflowso);
         coins.add(coinThree);
         coins.add(coinFour);
 
@@ -262,4 +262,4 @@ public class MainTest {
         // Check if the ExecuteTransaction class implements the Runnable interface
         assertTrue(executeTransaction instanceof Runnable, "ExecuteTransaction should implement Runnable");
     }
-}
+
