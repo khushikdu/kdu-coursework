@@ -29,6 +29,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: >
+
           cd ./backend/homework/3 && mvn install sonar:sonar 
           -Dsonar.verbose=true 
           -Dsonar.projectKey=${{ secrets.KDUER_NAME }}-BE-Homework-3
@@ -52,6 +53,7 @@ jobs:
           PERSONAL_ACCESS_TOKEN_GITHUB: ${{ secrets.PERSONAL_ACCESS_TOKEN_GITHUB }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
 
           SONAR_PROJECT_KEY: ${{ secrets.KDUER_NAME }}-BE-Homework-3
           USERNAME_GITHUB: ${{ secrets.USERNAME_GITHUB }}
